@@ -32,5 +32,4 @@ if ( !empty( $link['url'] ) ) {
 	        <?php } ?>
         </a>
 	<?php } ?>
-
 </div>

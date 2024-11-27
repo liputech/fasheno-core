@@ -5,15 +5,6 @@
  * @version 1.0
  * @var $layout                     string
  * @var $main_image                 string
- * @var $title1                     string
- * @var $title2                     string
- * @var $title3                     string
- * @var $shape_one                  string
- * @var $shape_two                  string
- * @var $shape_three                string
- * @var $shape_four                 string
- * @var $shape_five                 string
- * @var $shape_six                  string
  * @var $position                   string
  * @var $z_index                    string
  * @var $animation                  string

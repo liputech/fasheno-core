@@ -57,7 +57,7 @@ class HeroSlider extends ElementorBase {
 			'title', [
 				'label' => __('Title', 'fasheno-core'),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __('Grow Up Your Business With Finance Audit', 'fasheno-core'),
+				'default' => __('Classic Elegance for Women', 'fasheno-core'),
 				'label_block' => true,
 			]
 		);
@@ -65,7 +65,7 @@ class HeroSlider extends ElementorBase {
 			'content', [
 				'label' => __('Content', 'fasheno-core'),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
-				'default' => __('A good strategy is a strategy that can successfully lead the business in a more developed direction.', 'fasheno-core'),
+				'default' => __('Lorem ipsum dolor sit amet consectetur. Dui a mollis non venenatis porta enim purus. Purus aliquam fermentum venenatis id imperdiet. ', 'fasheno-core'),
 				'label_block' => true,
 			]
 		);
@@ -73,7 +73,7 @@ class HeroSlider extends ElementorBase {
 			'button_text', [
 				'type' => Controls_Manager::TEXT,
 				'label'   => esc_html__( 'Button Text', 'fasheno-core' ),
-				'default' => esc_html__( 'Contact With Us', 'fasheno-core' ),
+				'default' => esc_html__( 'Shop Now', 'fasheno-core' ),
 				'label_block' => true,
 			]
 		);
@@ -131,19 +131,19 @@ class HeroSlider extends ElementorBase {
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'sub_title' => __('Top Financial Advisor', 'fasheno-core'),
-						'title' => __('Grow Up Your Business With Finance Audit', 'fasheno-core'),
-						'content' => __('A good strategy is a strategy that can successfully lead the business in a more developed direction.', 'fasheno-core'),
+						'sub_title' => __('Top Trending', 'fasheno-core'),
+						'title' => __('Classic Elegance for Women', 'fasheno-core'),
+						'content' => __('Lorem ipsum dolor sit amet consectetur. Dui a mollis non venenatis porta enim purus. Purus aliquam fermentum venenatis id imperdiet. ', 'fasheno-core'),
 					],
 					[
-						'sub_title' => __('Top Financial Advisor', 'fasheno-core'),
-						'title' => __('Grow Up Your Business With Finance Audit', 'fasheno-core'),
-						'content' => __('A good strategy is a strategy that can successfully lead the business in a more developed direction.', 'fasheno-core'),
+						'sub_title' => __('Top Trending', 'fasheno-core'),
+						'title' => __('Here Comes The Fun', 'fasheno-core'),
+						'content' => __('Lorem ipsum dolor sit amet consectetur. Dui a mollis non venenatis porta enim purus. Purus aliquam fermentum venenatis id imperdiet. ', 'fasheno-core'),
 					],
 					[
-						'sub_title' => __('Top Financial Advisor', 'fasheno-core'),
-						'title' => __('Grow Up Your Business With Finance Audit', 'fasheno-core'),
-						'content' => __('A good strategy is a strategy that can successfully lead the business in a more developed direction.', 'fasheno-core'),
+						'sub_title' => __('Top Trending', 'fasheno-core'),
+						'title' => __('Classic Elegance for Women', 'fasheno-core'),
+						'content' => __('Lorem ipsum dolor sit amet consectetur. Dui a mollis non venenatis porta enim purus. Purus aliquam fermentum venenatis id imperdiet. ', 'fasheno-core'),
 					],
 				],
 				'title_field' => '{{{ title }}}',
@@ -166,7 +166,7 @@ class HeroSlider extends ElementorBase {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .rt-hero-slider .single-slider' => 'min-height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .rt-hero-slider .content-wrap' => 'max-height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -352,6 +352,20 @@ class HeroSlider extends ElementorBase {
 			]
 		);
 
+		$this->add_control(
+			'button_style',
+			[
+				'label'       => esc_html__( 'Button Style', 'fasheno-core' ),
+				'type'        => Controls_Manager::SELECT2,
+				'options'   => [
+					'1' => __( 'Button 01', 'fasheno-core' ),
+					'2' => __( 'Button 02', 'fasheno-core' ),
+					'3' => __( 'Button 03', 'fasheno-core' ),
+				],
+				'default'     => '3',
+			]
+		);
+
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
@@ -361,17 +375,6 @@ class HeroSlider extends ElementorBase {
 			]
 		);
 
-		$this->add_responsive_control(
-			'button_padding',
-			[
-				'label'              => __( 'Padding', 'fasheno-core' ),
-				'type'               => Controls_Manager::DIMENSIONS,
-				'size_units'         => [ 'px' ],
-				'selectors'          => [
-					'{{WRAPPER}} .rt-button .btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-				],
-			]
-		);
 		$this->add_responsive_control(
 			'button_radius',
 			[
@@ -466,7 +469,7 @@ class HeroSlider extends ElementorBase {
 						'label' => esc_html__( 'Background', 'fasheno-core' ),
 					],
 				],
-				'selector' => '{{WRAPPER}} .rt-button .btn:before',
+				'selector' => '{{WRAPPER}} .rt-button .btn',
 			]
 		);
 
@@ -484,6 +487,18 @@ class HeroSlider extends ElementorBase {
 				'name' => 'button_box_shadow',
 				'label' => __('Box Shadow', 'fasheno-core'),
 				'selector' => '{{WRAPPER}} .rt-button .btn',
+			]
+		);
+
+		$this->add_responsive_control(
+			'button_padding',
+			[
+				'label'              => __( 'Padding', 'fasheno-core' ),
+				'type'               => Controls_Manager::DIMENSIONS,
+				'size_units'         => [ 'px' ],
+				'selectors'          => [
+					'{{WRAPPER}} .rt-button .btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+				],
 			]
 		);
 
@@ -519,7 +534,7 @@ class HeroSlider extends ElementorBase {
 						'label' => esc_html__( 'Background', 'fasheno-core' ),
 					],
 				],
-				'selector' => '{{WRAPPER}} .rt-button .btn:after',
+				'selector' => '{{WRAPPER}} .rt-button .btn:hover',
 			]
 		);
 
@@ -539,10 +554,106 @@ class HeroSlider extends ElementorBase {
 				'selector' => '{{WRAPPER}} .rt-button .btn:hover',
 			]
 		);
+		$this->add_responsive_control(
+			'button_hover_padding',
+			[
+				'label'              => __( 'Padding', 'fasheno-core' ),
+				'type'               => Controls_Manager::DIMENSIONS,
+				'size_units'         => [ 'px' ],
+				'selectors'          => [
+					'{{WRAPPER}} .rt-button .btn:hover' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+				],
+			]
+		);
 
 		$this->end_controls_tab();
 
 		$this->end_controls_tabs();
+
+		$this->add_control(
+			'button_icon',
+			[
+				'label'            => __( 'Choose Icon', 'fasheno-core' ),
+				'type'      => \Elementor\Controls_Manager::ICONS,
+				'fa4compatibility' => 'icon',
+				'default'          => [
+					'value'   => 'icon-rt-right-arrow',
+					'library' => 'solid',
+				],
+			]
+		);
+
+		$this->add_control(
+			'icon_size',
+			[
+				'label'      => __( 'Icon Size', 'fasheno-core' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => [ 'px' ],
+				'range'      => [
+					'px' => [
+						'min'  => 5,
+						'max'  => 40,
+						'step' => 1,
+					],
+				],
+				'selectors'  => [
+					'{{WRAPPER}} .rt-button .btn i'   => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .rt-button .btn svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'button_icon_color',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => esc_html__( 'Icon Color', 'fasheno-core' ),
+				'selectors' => [
+					'{{WRAPPER}} .rt-button .btn i'        => 'color: {{VALUE}} !important',
+					'{{WRAPPER}} .rt-button .btn svg path' => 'fill: {{VALUE}} !important',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'icon_space',
+			[
+				'type'    => Controls_Manager::SLIDER,
+				'mode'          => 'responsive',
+				'label'   => esc_html__( 'Icon Space', 'fasheno-core' ),
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => -100,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .rt-button .btn i' => 'left: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'icon_hover_space',
+			[
+				'type'    => Controls_Manager::SLIDER,
+				'mode'          => 'responsive',
+				'label'   => esc_html__( 'Icon Hover Space', 'fasheno-core' ),
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => -100,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .rt-button .btn:hover i' => 'left: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
 
 		$this->end_controls_section();
 

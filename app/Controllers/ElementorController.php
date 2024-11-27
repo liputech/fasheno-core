@@ -19,6 +19,7 @@ use RT\FashenoCore\Elementor\Widgets\Button;
 use RT\FashenoCore\Elementor\Widgets\HeroSlider;
 use RT\FashenoCore\Elementor\Widgets\ContactInfo;
 use RT\FashenoCore\Elementor\Widgets\Image;
+use RT\FashenoCore\Elementor\Widgets\ImageBox;
 use RT\FashenoCore\Elementor\Widgets\ImageGallery;
 use RT\FashenoCore\Elementor\Widgets\SpecialOffer;
 use RT\FashenoCore\Elementor\Widgets\SocialIcon;
@@ -114,6 +115,7 @@ class ElementorController {
 			HeroSlider::class,
 			ContactInfo::class,
 			Image::class,
+			ImageBox::class,
 			ImageGallery::class,
 			SpecialOffer::class,
 			ProgressBar::class,

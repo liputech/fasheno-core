@@ -74,9 +74,6 @@ class Image extends ElementorBase {
 					'{{WRAPPER}} .rt-image-layout' => 'text-align: {{VALUE}};',
 				],
 				'separator' => 'before',
-				'condition'   => [
-					'layout!' => ['layout-5', 'layout-6'],
-				],
 			]
 		);
 
@@ -98,9 +95,6 @@ class Image extends ElementorBase {
 				'type'        => Controls_Manager::URL,
 				'placeholder' => __( 'https://your-link.com', 'fasheno-core' ),
 				'show_label'  => false,
-				'condition'   => [
-					'layout!' => ['layout-5', 'layout-6'],
-				],
 			]
 		);
 

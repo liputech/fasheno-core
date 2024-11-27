@@ -10,6 +10,8 @@
  * @var $display_pagination         string
  * @var $slider_animation           string
  * @var $title_tag                  string
+ * @var $button_style               string
+ * @var $button_icon                string
  */
 
 $banners = array();
@@ -20,7 +22,7 @@ foreach ( $slider_items as $banner_list ) {
 		'content'           => $banner_list['content'],
 		'button_text'       => $banner_list['button_text'],
 		'button_url'        => $banner_list['button_url']['url'],
-		'img'               => $banner_list['banner_image']['url'] ? $banner_list['banner_image']['url'] : "",
+		'img'               => $banner_list['banner_image'],
 	);
 }
 ?>
@@ -31,23 +33,27 @@ foreach ( $slider_items as $banner_list ) {
             <?php $i = 1;
             foreach ($banners as $banner){ ?>
                 <div class="swiper-slide single-slide slide-<?php echo esc_attr( $i ); ?>">
-                    <div class="single-slider" data-bg-image="<?php echo esc_attr($banner['img']); ?>">
-                        <div class="container">
-                            <div class="content-wrap">
-                                <div class="slider-content">
-                                    <?php if( !empty( $banner['sub_title'] ) ) { ?>
-                                        <div class="sub-title"><?php echo fasheno_html( $banner['sub_title'], 'allow_title' );?></div>
-                                    <?php } if( !empty( $banner['title'] ) ) { ?>
-                                        <<?php echo esc_attr( $title_tag ) ?> class="slider-title"><?php echo fasheno_html( $banner['title'], 'allow_title' );?></<?php echo esc_attr( $title_tag ) ?>>
-                                    <?php } if( !empty( $banner['content'] ) ) { ?>
-                                        <div class="slider-text"><?php echo fasheno_html( $banner['content'], 'allow_title' );?></div>
-                                    <?php } ?>
-                                    <?php if( !empty( $banner['button_text'] ) ) { ?>
-                                        <div class="slider-btn-area rt-button">
-                                            <a class="btn button-2" href="<?php echo esc_url( $banner['button_url'] ); ?>"><?php echo fasheno_html( $banner['button_text'], 'allow_title' );?><i class="icon-fasheno-right-arrow"></i></a>
-                                        </div>
-                                    <?php } ?>
-                                </div>
+                    <div class="single-slider">
+                        <div class="content-wrap">
+                            <div class="slider-image">
+	                            <?php echo wp_get_attachment_image( $banner['img']['id'], 'full' ); ?>
+                            </div>
+                            <div class="slider-content">
+                                <?php if( !empty( $banner['sub_title'] ) ) { ?>
+                                    <div class="sub-title"><?php echo fasheno_html( $banner['sub_title'], 'allow_title' );?></div>
+                                <?php } if( !empty( $banner['title'] ) ) { ?>
+                                    <<?php echo esc_attr( $title_tag ) ?> class="slider-title"><?php echo fasheno_html( $banner['title'], 'allow_title' );?></<?php echo esc_attr( $title_tag ) ?>>
+                                <?php } if( !empty( $banner['content'] ) ) { ?>
+                                    <div class="slider-text"><?php echo fasheno_html( $banner['content'], 'allow_title' );?></div>
+                                <?php } ?>
+                                <?php if( !empty( $banner['button_text'] ) ) { ?>
+                                    <div class="slider-btn-area rt-button">
+                                        <a class="btn button-<?php echo esc_attr( $button_style ); ?>" href="<?php echo esc_url( $banner['button_url'] ); ?>">
+                                            <span><?php if( $button_icon ) { ?><?php \Elementor\Icons_Manager::render_icon( $button_icon ); ?><?php } ?><?php echo esc_html( $banner['button_text'] );?></span>
+                                        </a>
+
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
