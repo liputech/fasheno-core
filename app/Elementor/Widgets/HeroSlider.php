@@ -85,16 +85,28 @@ class HeroSlider extends ElementorBase {
 				'label_block' => true,
 			]
 		);
+		$repeater->add_control(
+			'info_icon',
+			[
+				'label'            => __( 'Choose Icon', 'fasheno-core' ),
+				'type'             => Controls_Manager::ICONS,
+				'fa4compatibility' => 'icon',
+				'default'          => [
+					'value'   => 'icon-rt-flash',
+					'library' => 'solid',
+				],
+			]
+		);
 		$this->add_control(
 			'layout',
 			[
 				'label'       => esc_html__( 'Layout', 'fasheno-core' ),
 				'type'        => Controls_Manager::SELECT2,
 				'options'   => [
-					'default' => __( 'Default', 'fasheno-core' ),
-					'custom' => __( 'Custom', 'fasheno-core' ),
+					'layout-1' => __( 'Slider 01', 'fasheno-core' ),
+					'layout-2' => __( 'Slider 02', 'fasheno-core' ),
 				],
-				'default'     => 'default',
+				'default'     => 'layout-1',
 			]
 		);
 
@@ -118,7 +130,7 @@ class HeroSlider extends ElementorBase {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .content-wrap' => 'text-align: {{VALUE}};',
+					'{{WRAPPER}} .slider-content' => 'text-align: {{VALUE}};',
 				],
 				'separator' => 'after',
 			]
@@ -167,14 +179,39 @@ class HeroSlider extends ElementorBase {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .rt-hero-slider .content-wrap' => 'max-height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .rt-hero-slider-layout-2 .single-slider' => 'min-height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
 		$this->add_responsive_control(
-			'slider_width',
+			'slider_image_width',
 			[
 				'type'    => Controls_Manager::SLIDER,
-				'label'   => esc_html__( 'Slider Width', 'fasheno-core' ),
+				'label'   => esc_html__( 'Slider Image Width', 'fasheno-core' ),
+				'size_units' => [ '%', 'px' ],
+				'range' => [
+					'%' => [
+						'min' => 0,
+						'max' => 100,
+					],
+					'px' => [
+						'min' => 0,
+						'max' => 1200,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .rt-hero-slider-layout-1 .slider-image img' => 'max-width: {{SIZE}}{{UNIT}};',
+				],
+				'condition' => [
+					'layout' => 'layout-1',
+				],
+			]
+		);
+		$this->add_responsive_control(
+			'slider_content_width',
+			[
+				'type'    => Controls_Manager::SLIDER,
+				'label'   => esc_html__( 'Slider Content Width', 'fasheno-core' ),
 				'size_units' => [ '%', 'px' ],
 				'range' => [
 					'%' => [
@@ -234,13 +271,19 @@ class HeroSlider extends ElementorBase {
 		$this->add_responsive_control(
 			'sub_title_margin',
 			[
-				'label' => __('Margin', 'fasheno-core'),
-				'type' => Controls_Manager::DIMENSIONS,
-				'size_units' => ['px'],
-				'selectors' => [
-					'{{WRAPPER}} .rt-hero-slider .sub-title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+				'type'    => Controls_Manager::SLIDER,
+				'mode'          => 'responsive',
+				'label'   => esc_html__( 'Margin Bottom', 'fasheno-core' ),
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
 				],
-				'separator' =>'before',
+				'selectors' => [
+					'{{WRAPPER}} .rt-hero-slider .sub-title' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+				],
 			]
 		);
 		$this->end_controls_section();
@@ -577,7 +620,7 @@ class HeroSlider extends ElementorBase {
 				'type'      => \Elementor\Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default'          => [
-					'value'   => 'icon-rt-right-arrow',
+					'value'   => 'icon-rt-next',
 					'library' => 'solid',
 				],
 			]
@@ -1149,6 +1192,12 @@ class HeroSlider extends ElementorBase {
 		);
 
 		$template = 'view-1';
+
+		if ( 'layout-1' == $data['layout'] ) {
+			$template = 'view-1';
+		} elseif ( 'layout-2' == $data['layout'] ) {
+			$template = 'view-2';
+		}
 
 		$data['swiper_data'] = json_encode( $swiper_data );
 

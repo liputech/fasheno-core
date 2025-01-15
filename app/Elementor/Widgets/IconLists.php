@@ -78,7 +78,7 @@ class IconLists extends ElementorBase {
 				'type' => \Elementor\Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
-					'value' => 'icon-rt-correct',
+					'value' => 'icon-rt-check-1',
 					'library' => 'solid',
 				],
 			]
@@ -120,42 +120,35 @@ class IconLists extends ElementorBase {
 					[
 						'title' => __('Financing Management', 'fasheno-core'),
 						'list_icon' => [
-							'value' => 'icon-rt-data-service',
+							'value' => 'icon-rt-check-1',
 							'library' => 'solid',
 						],
 					],
 					[
 						'title' => __('Business Analytics', 'fasheno-core'),
 						'list_icon' => [
-							'value' => 'icon-rt-secure-data-service',
+							'value' => 'icon-rt-check-1',
 							'library' => 'solid',
 						],
 					],
 					[
 						'title' => __('Investment Planning', 'fasheno-core'),
 						'list_icon' => [
-							'value' => 'icon-rt-app-service-alt',
+							'value' => 'icon-rt-check-1',
 							'library' => 'solid',
 						],
 					],
 					[
 						'title' => __('Tax Advisory', 'fasheno-core'),
 						'list_icon' => [
-							'value' => 'icon-rt-tax-service',
+							'value' => 'icon-rt-check-1',
 							'library' => 'solid',
 						],
 					],
 					[
 						'title' => __('Financial Guidance', 'fasheno-core'),
 						'list_icon' => [
-							'value' => 'icon-rt-guidance-service',
-							'library' => 'solid',
-						],
-					],
-					[
-						'title' => __('Money Analytics', 'fasheno-core'),
-						'list_icon' => [
-							'value' => 'icon-rt-money-analysis-service',
+							'value' => 'icon-rt-check-1',
 							'library' => 'solid',
 						],
 					],
@@ -290,6 +283,7 @@ class IconLists extends ElementorBase {
 				'label' => esc_html__('Color', 'fasheno-core'),
 				'selectors' => [
 					'{{WRAPPER}} .rt-icon-list .title-link i' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .rt-icon-list .right-arrow-icon .title-link:after' => 'color: {{VALUE}}',
 
 				],
 			]
@@ -301,6 +295,7 @@ class IconLists extends ElementorBase {
 				'label' => esc_html__('Hover Color', 'fasheno-core'),
 				'selectors' => [
 					'{{WRAPPER}} .rt-icon-list .title-link:hover i' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .rt-icon-list .right-arrow-icon .title-link:hover:after' => 'color: {{VALUE}}',
 
 				],
 			]

@@ -160,92 +160,6 @@ class VideoIcon extends ElementorBase {
 			]
 		);
 
-		// scroll animation
-		$this->add_control(
-			'scroll_animation',
-			[
-				'label'        => __( 'Scroll Animation', 'fasheno-core' ),
-				'type'         => \Elementor\Controls_Manager::SWITCHER,
-				'label_on'     => __( 'Show', 'fasheno-core' ),
-				'label_off'    => __( 'Hide', 'fasheno-core' ),
-				'return_value' => 'yes',
-				'default'      => 'no',
-				'separator' => 'before',
-			]
-		);
-		$this->add_control(
-			'x_range',
-			[
-				'label'       => esc_html__( 'Animation Property', 'fasheno-core' ),
-				'type'    => Controls_Manager::SELECT,
-				'options' => [
-					'x' => __( 'x', 'fasheno-core' ),
-					'y' => __( 'y', 'fasheno-core' ),
-					'z' => __( 'z', 'fasheno-core' ),
-					'rotateX' => __( 'rotateX', 'fasheno-core' ),
-					'rotateY' => __( 'rotateY', 'fasheno-core' ),
-					'rotateZ' => __( 'rotateZ', 'fasheno-core' ),
-					'scaleX' => __( 'scaleX', 'fasheno-core' ),
-					'scaleY' => __( 'scaleY', 'fasheno-core' ),
-					'scaleZ' => __( 'scaleZ', 'fasheno-core' ),
-					'scale' => __( 'scale', 'fasheno-core' ),
-				],
-				'label_block' => true,
-				'default'     => 'y',
-				'condition'   => [
-					'scroll_animation' => ['yes'],
-				],
-			]
-		);
-		$this->add_control(
-			'y_range',
-			[
-				'label'       => esc_html__( 'Animation Property', 'fasheno-core' ),
-				'type'    => Controls_Manager::SELECT,
-				'options' => [
-					'x' => __( 'x', 'fasheno-core' ),
-					'y' => __( 'y', 'fasheno-core' ),
-					'z' => __( 'z', 'fasheno-core' ),
-					'rotateX' => __( 'rotateX', 'fasheno-core' ),
-					'rotateY' => __( 'rotateY', 'fasheno-core' ),
-					'rotateZ' => __( 'rotateZ', 'fasheno-core' ),
-					'scaleX' => __( 'scaleX', 'fasheno-core' ),
-					'scaleY' => __( 'scaleY', 'fasheno-core' ),
-					'scaleZ' => __( 'scaleZ', 'fasheno-core' ),
-					'scale' => __( 'scale', 'fasheno-core' ),
-				],
-				'label_block' => true,
-				'default'     => 'x',
-				'condition'   => [
-					'scroll_animation' => ['yes'],
-				],
-			]
-		);
-		$this->add_control(
-			'range_one',
-			[
-				'label'       => esc_html__( 'Range Value One', 'fasheno-core' ),
-				'type'        => Controls_Manager::TEXT,
-				'label_block' => true,
-				'default'     => 50,
-				'condition'   => [
-					'scroll_animation' => ['yes'],
-				],
-			]
-		);
-		$this->add_control(
-			'range_two',
-			[
-				'label'       => esc_html__( 'Range Value Two', 'fasheno-core' ),
-				'type'        => Controls_Manager::TEXT,
-				'label_block' => true,
-				'default'     => 0,
-				'condition'   => [
-					'scroll_animation' => ['yes'],
-				],
-			]
-		);
-
 		$this->end_controls_section();
 
 		//Play Button Style
@@ -312,12 +226,8 @@ class VideoIcon extends ElementorBase {
 						'step' => 1,
 					],
 				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 0,
-				],
 				'selectors' => [
-					'{{WRAPPER}} .rt-video-icon .icon-box' => 'margin-right:{{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .rt-video-icon .video-icon' => 'column-gap:{{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -370,17 +280,6 @@ class VideoIcon extends ElementorBase {
 					],
 				],
 				'selector' => '{{WRAPPER}} .rt-video-icon .video-popup-icon',
-			]
-		);
-
-		$this->add_control(
-			'animation_border_color',
-			[
-				'type'      => Controls_Manager::COLOR,
-				'label'     => esc_html__( 'Animate Border Color', 'fasheno-core' ),
-				'selectors' => [
-					'{{WRAPPER}} .rt-video-icon .video-popup-icon::before, {{WRAPPER}} .rt-video-icon .video-popup-icon::after' => 'border-color: {{VALUE}}',
-				],
 			]
 		);
 

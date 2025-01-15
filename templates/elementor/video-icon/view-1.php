@@ -7,11 +7,6 @@
  * @var $image              string
  * @var $video_url          string
  * @var $button_text        string
- * @var $scroll_animation   string
- * @var $range_one          string
- * @var $range_two          string
- * @var $x_range            string
- * @var $y_range            string
  */
 
 $animation_opacity1 = $animation_opacity ?? 30;
@@ -22,17 +17,15 @@ $img_bg  = '';
 if ( $img_url ) {
 	$img_bg = "background-image:url(" . esc_attr( $img_url[0] ) . ")";
 }
-$range_one = ( $scroll_animation == 'yes' ) ? $range_one : '';
-$range_two = ( $scroll_animation == 'yes' ) ? $range_two : '';
 ?>
 
 <?php if( $layout == 'icon-style1' ) { ?>
-<div class="rt-video-icon <?php echo esc_attr( $layout ) ?>" data-parallax='{"<?php echo esc_attr( $x_range );?>" : <?php echo esc_attr( $range_one );?>, "<?php echo esc_attr( $y_range );?>" : <?php echo esc_attr( $range_two );?>}'>
+<div class="rt-video-icon <?php echo esc_attr( $layout ) ?>">
 	<div class="video-icon">
 		<div class="icon-left">
 			<div class="icon-box">
 				<a class="popup-youtube video-popup-icon" href="<?php echo esc_url( $video_url ) ?>">
-                    <i class="icon-rt-play"></i>
+                    <i class="icon-rt-play-stroke"></i>
 				</a>
 			</div>
 		</div>
@@ -46,12 +39,12 @@ $range_two = ( $scroll_animation == 'yes' ) ? $range_two : '';
 	</div>
 </div>
 <?php } if( $layout == 'icon-style2' ) { ?>
-    <div class="rt-video-icon <?php echo esc_attr( $layout ) ?>" style="<?php echo esc_attr( $img_bg ) ?>" data-parallax='{"<?php echo esc_attr( $x_range );?>" : <?php echo esc_attr( $range_one );?>, "<?php echo esc_attr( $y_range );?>" : <?php echo esc_attr( $range_two );?>}'>
+    <div class="rt-video-icon <?php echo esc_attr( $layout ) ?>" style="<?php echo esc_attr( $img_bg ) ?>">
         <div class="video-icon">
             <div class="icon-left">
                 <div class="icon-box">
                     <a class="popup-youtube video-popup-icon" href="<?php echo esc_url( $video_url ) ?>">
-                        <i class="icon-rt-play"></i>
+                        <i class="icon-rt-play-stroke"></i>
                     </a>
                 </div>
             </div>

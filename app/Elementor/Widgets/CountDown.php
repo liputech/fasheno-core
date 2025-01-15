@@ -17,12 +17,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class Counter extends ElementorBase {
+class CountDown extends ElementorBase {
 
 	public function __construct( $data = [], $args = null ) {
-		$this->rt_name = esc_html__( 'RT Counter', 'fasheno-core' );
-		$this->rt_base = 'rt-counter';
+		$this->rt_name = esc_html__( 'RT Countdown', 'fasheno-core' );
+		$this->rt_base = 'rt-countdown';
 		parent::__construct( $data, $args );
+	}
+
+	public function get_script_depends() {
+		return [ 'rt-countdown' ];
 	}
 
 	protected function register_controls() {
@@ -35,42 +39,9 @@ class Counter extends ElementorBase {
 		);
 
 		$this->add_control(
-			'layout',
+			'label_text',
 			[
-				'label'       => esc_html__( 'Counter Layout', 'fasheno-core' ),
-				'type'        => Controls_Manager::SELECT2,
-				'options'   => [
-					'layout-1' => __( 'Layout 01', 'fasheno-core' ),
-					'layout-2' => __( 'Layout 02', 'fasheno-core' ),
-					'layout-3' => __( 'Layout 03', 'fasheno-core' ),
-				],
-				'default'     => 'layout-1',
-			]
-		);
-
-		$this->add_control(
-			'title',
-			[
-				'label'       => esc_html__( 'Title', 'fasheno-core' ),
-				'type'        => Controls_Manager::TEXT,
-				'label_block' => true,
-				'default'     => __( 'Projects Completed', 'fasheno-core' ),
-			]
-		);
-
-		$this->add_control(
-			'number',
-			[
-				'label'       => esc_html__( 'Count Number', 'fasheno-core' ),
-				'type'        => Controls_Manager::NUMBER,
-				'default'     => 567,
-			]
-		);
-
-		$this->add_control(
-			'unit',
-			[
-				'label'       => esc_html__( 'Counter Unit', 'fasheno-core' ),
+				'label'       => esc_html__( 'Label Text', 'fasheno-core' ),
 				'type'        => Controls_Manager::TEXT,
 				'label_block' => true,
 				'default'     => '',
@@ -78,34 +49,25 @@ class Counter extends ElementorBase {
 		);
 
 		$this->add_control(
-			'icon_type',
+			'label_icon',
 			[
-				'label' => __('Icon Type', 'fasheno-core'),
-				'type' => Controls_Manager::SELECT,
-				'default' => 'none',
-				'options' => [
-					'icon' => __('Icon', 'fasheno-core'),
-					'none' => __('None', 'fasheno-core'),
-				],
-				'condition' => [
-					'layout!' => ['layout-4'],
+				'label'            => __( 'Choose Icon', 'fasheno-core' ),
+				'type'      => \Elementor\Controls_Manager::ICONS,
+				'fa4compatibility' => 'icon',
+				'default'          => [
+					'value'   => 'icon-rt-next',
+					'library' => 'solid',
 				],
 			]
 		);
+
 		$this->add_control(
-			'counter_icon',
+			'date_time',
 			[
-				'label'            => __( 'Choose Icon', 'fasheno-core' ),
-				'type'             => Controls_Manager::ICONS,
-				'fa4compatibility' => 'icon',
-				'default'          => [
-					'value'   => 'icon-rt-paper-plane',
-					'library' => 'solid',
-				],
-				'condition' => [
-					'icon_type' => ['icon'],
-					'layout!' => ['layout-4'],
-				],
+				'label'     => esc_html__( 'Date & Time', 'fasheno-core' ),
+				'type'      => Controls_Manager::DATE_TIME,
+				'description'  => esc_html__('Set date and time', 'fasheno-core'),
+				'default' => '2024-12-01',
 			]
 		);
 
@@ -129,18 +91,173 @@ class Counter extends ElementorBase {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .rt-counter-layout' => 'text-align: {{VALUE}};',
+					'{{WRAPPER}} .rt-countdown-wrap' => 'justify-content: {{VALUE}};',
+					'{{WRAPPER}} .rt-countdown-layout' => 'justify-content: {{VALUE}};',
 				],
 			]
 		);
 
 		$this->end_controls_section();
 
-		// Title setting
+		// Label Settings
 		$this->start_controls_section(
-			'title_style',
+			'label_settings',
 			[
-				'label' => esc_html__( 'Title Style', 'fasheno-core' ),
+				'label' => esc_html__( 'Label Settings', 'fasheno-core' ),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_responsive_control(
+			'flex_direction',
+			[
+				'label'     => __( 'Direction', 'fasheno-core' ),
+				'type'      => Controls_Manager::CHOOSE,
+				'options'   => [
+					'column' => [
+						'title' => __( 'Column', 'fasheno-core' ),
+						'icon'  => 'eicon-arrow-up',
+					],
+					'row'     => [
+						'title' => __( 'Row', 'fasheno-core' ),
+						'icon'  => 'eicon-arrow-right',
+					],
+					'column-reverse'   => [
+						'title' => __( 'Column Reverse', 'fasheno-core' ),
+						'icon'  => 'eicon-arrow-down',
+					],
+					'row-reverse'   => [
+						'title' => __( 'Row Reverse', 'fasheno-core' ),
+						'icon'  => 'eicon-arrow-left',
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .rt-countdown-wrap' => 'flex-direction: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'flex_alignment',
+			[
+				'label'     => __( 'Alignment', 'fasheno-core' ),
+				'type'      => Controls_Manager::CHOOSE,
+				'options'   => [
+					'flex-start' => [
+						'title' => __( 'Left', 'fasheno-core' ),
+						'icon'  => 'eicon-text-align-left',
+					],
+					'center'     => [
+						'title' => __( 'Center', 'fasheno-core' ),
+						'icon'  => 'eicon-text-align-center',
+					],
+					'flex-end'   => [
+						'title' => __( 'Right', 'fasheno-core' ),
+						'icon'  => 'eicon-text-align-right',
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .rt-countdown-wrap' => 'align-items: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name'     => 'label_typo',
+				'label'    => esc_html__( 'Typo', 'fasheno-core' ),
+				'selector' => '{{WRAPPER}} .rt-label',
+			]
+		);
+
+		$this->add_control(
+			'label_color',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => esc_html__( 'Color', 'fasheno-core' ),
+				'selectors' => [
+					'{{WRAPPER}} .rt-label'   => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'label_gap',
+			[
+				'type'    => Controls_Manager::SLIDER,
+				'label'   => esc_html__( 'Gap', 'fasheno-core' ),
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .rt-countdown-wrap' => 'gap: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'label_icon_size',
+			[
+				'type'       => Controls_Manager::SLIDER,
+				'label'      => esc_html__( 'Icon Size', 'fasheno-core' ),
+				'size_units' => [ 'px' ],
+				'range'      => [
+					'px' => [
+						'min'  => 0,
+						'max'  => 100,
+						'step' => 0.1,
+					],
+				],
+				'selectors'  => [
+					'{{WRAPPER}} .rt-label i'   => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .rt-label svg' => 'transform: scale({{SIZE}});',
+				],
+
+			]
+		);
+
+		$this->add_control(
+			'label_icon_color',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => esc_html__( 'Icon Color', 'fasheno-core' ),
+				'selectors' => [
+					'{{WRAPPER}} .rt-label i'   => 'color: {{VALUE}}',
+					'{{WRAPPER}} .rt-label path'   => 'fill: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'label_icon_gap',
+			[
+				'type'    => Controls_Manager::SLIDER,
+				'label'   => esc_html__( 'Icon Gap', 'fasheno-core' ),
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .rt-label' => 'gap: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->end_controls_section();
+
+		// Unit setting
+		$this->start_controls_section(
+			'unit_style',
+			[
+				'label' => esc_html__( 'Unit Style', 'fasheno-core' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -148,25 +265,25 @@ class Counter extends ElementorBase {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name'     => 'title_typo',
+				'name'     => 'unit_typo',
 				'label'    => esc_html__( 'Typo', 'fasheno-core' ),
-				'selector' => '{{WRAPPER}} .rt-counter-layout .rt-counter-box .counter-label',
+				'selector' => '{{WRAPPER}} .countdown-unit',
 			]
 		);
 
 		$this->add_control(
-			'title_color',
+			'unit_color',
 			[
 				'type'      => Controls_Manager::COLOR,
 				'label'     => esc_html__( 'Color', 'fasheno-core' ),
 				'selectors' => [
-					'{{WRAPPER}} .rt-counter-layout .rt-counter-box .counter-label' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .countdown-unit' => 'color: {{VALUE}}',
 				],
 			]
 		);
 
-		$this->add_control(
-			'title_space',
+		$this->add_responsive_control(
+			'unit_space',
 			[
 				'label'      => __( 'Space', 'fasheno-core' ),
 				'type'       => Controls_Manager::SLIDER,
@@ -174,23 +291,23 @@ class Counter extends ElementorBase {
 				'range'      => [
 					'px' => [
 						'min'  => 0,
-						'max'  => 100,
+						'max'  => 50,
 						'step' => 1,
 					],
 				],
 				'selectors'  => [
-					'{{WRAPPER}} .rt-counter-layout .rt-counter-box .counter-label' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .countdown-unit' => 'margin-bottom: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
 
 		$this->end_controls_section();
 
-		// Counter number setting
+		// Number setting
 		$this->start_controls_section(
-			'counter_style',
+			'number_style',
 			[
-				'label' => esc_html__( 'Counter Style', 'fasheno-core' ),
+				'label' => esc_html__( 'Number Style', 'fasheno-core' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -198,230 +315,45 @@ class Counter extends ElementorBase {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name'     => 'counter_typo',
+				'name'     => 'number_typo',
 				'label'    => esc_html__( 'Typo', 'fasheno-core' ),
-				'selector' => '{{WRAPPER}} .rt-counter-layout .rt-counter-box .counter-number',
+				'selector' => '{{WRAPPER}} .countdown-number',
 			]
 		);
 
 		$this->add_control(
-			'counter_color',
+			'number_color',
 			[
 				'type'      => Controls_Manager::COLOR,
 				'label'     => esc_html__( 'Color', 'fasheno-core' ),
 				'selectors' => [
-					'{{WRAPPER}} .rt-counter-layout .rt-counter-box .counter-number' => 'color: {{VALUE}}',
-				],
-			]
-		);
-
-		$this->add_control(
-			'counter_stroke_color',
-			[
-				'type'      => Controls_Manager::COLOR,
-				'label'     => esc_html__( 'Stroke Color', 'fasheno-core' ),
-				'selectors' => [
-					'{{WRAPPER}} .rt-counter-layout .rt-counter-box .counter-number' => '-webkit-text-stroke: 2px {{VALUE}}',
-				],
-			]
-		);
-
-		$this->add_control(
-			'gradient_display',
-			[
-				'label'        => __( 'Gradient Counter', 'fasheno-core' ),
-				'type'         => \Elementor\Controls_Manager::SWITCHER,
-				'label_on'     => __( 'Show', 'fasheno-core' ),
-				'label_off'    => __( 'Hide', 'fasheno-core' ),
-				'return_value' => 'counter-gradient',
-				'default'      => 'no',
-				'condition' => [
-					'layout' => 'layout-2',
-				],
-			]
-		);
-
-		$this->add_group_control(
-			\Elementor\Group_Control_Background::get_type(),
-			[
-				'name' => 'counter_gradient',
-				'types' => [ 'gradient' ],
-				'selector' => '{{WRAPPER}} .rt-counter-layout-2 .rt-counter-box .counter-number',
-				'return_value' => 'counter-gradient',
-				'condition' => [
-					'layout' => ['layout-2'], 'gradient_display' => ['counter-gradient'],
+					'{{WRAPPER}} .countdown-number' => 'color: {{VALUE}}',
 				],
 			]
 		);
 
 		$this->add_responsive_control(
-			'counter_space',
+			'number_space',
 			[
-				'label'      => __( 'Counter Space', 'fasheno-core' ),
+				'label'      => __( 'Space', 'fasheno-core' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range'      => [
 					'px' => [
 						'min'  => 0,
-						'max'  => 100,
+						'max'  => 50,
 						'step' => 1,
 					],
 				],
 				'selectors'  => [
-					'{{WRAPPER}} .rt-counter-layout .rt-counter-box .counter-number' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .countdown-number' => 'margin-bottom: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
 
 		$this->end_controls_section();
 
-		// Icon style
-		$this->start_controls_section(
-			'counter_icon_style',
-			[
-				'label' => esc_html__( 'Icon Style', 'fasheno-core' ),
-				'tab'   => Controls_Manager::TAB_STYLE,
-				'condition' => [
-					'layout!' => 'layout-4',
-				],
-			]
-		);
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name'     => 'icon_typo',
-				'label'    => esc_html__( 'Typo', 'fasheno-core' ),
-				'selector' => '{{WRAPPER}} .rt-counter-layout .bg-shape',
-			]
-		);
-		$this->add_control(
-			'icon_color',
-			[
-				'type'      => Controls_Manager::COLOR,
-				'label'     => esc_html__( 'Color', 'fasheno-core' ),
-				'selectors' => [
-					'{{WRAPPER}} .rt-counter-layout .bg-shape' => 'color: {{VALUE}}',
-				],
-			]
-		);
-		$this->add_control(
-			'icon_bg_color',
-			[
-				'type'      => Controls_Manager::COLOR,
-				'label'     => esc_html__( 'Background Color', 'fasheno-core' ),
-				'selectors' => [
-					'{{WRAPPER}} .rt-counter-layout .bg-shape' => 'background-color: {{VALUE}}',
-				],
-			]
-		);
-		$this->add_responsive_control(
-			'icon_padding',
-			[
-				'label'              => __( 'Padding', 'fasheno-core' ),
-				'type'               => Controls_Manager::DIMENSIONS,
-				'size_units'         => [ 'px' ],
-				'selectors'          => [
-					'{{WRAPPER}} .rt-counter-layout .bg-shape' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-				],
-			]
-		);
-		$this->add_responsive_control(
-			'icon_radius',
-			[
-				'label'              => __( 'Radius', 'fasheno-core' ),
-				'type'               => Controls_Manager::DIMENSIONS,
-				'size_units'         => [ 'px' ],
-				'selectors'          => [
-					'{{WRAPPER}} .rt-counter-layout .bg-shape' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-				],
-				'separator' => 'before',
-			]
-		);
-
-		$this->add_responsive_control(
-			'icon_space',
-			[
-				'label'      => __( 'Icon Space', 'fasheno-core' ),
-				'type'       => Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range'      => [
-					'px' => [
-						'min'  => 0,
-						'max'  => 100,
-						'step' => 1,
-					],
-				],
-				'selectors'  => [
-					'{{WRAPPER}} .rt-counter-layout .bg-shape' => 'margin-bottom: {{SIZE}}{{UNIT}};',
-				],
-				'condition' => [
-					'layout!' => 'layout-3',
-				],
-			]
-		);
-
-		$this->add_responsive_control(
-			'icon_space2',
-			[
-				'label'      => __( 'Icon Space', 'fasheno-core' ),
-				'type'       => Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range'      => [
-					'px' => [
-						'min'  => 0,
-						'max'  => 100,
-						'step' => 1,
-					],
-				],
-				'selectors'  => [
-					'{{WRAPPER}} .rt-counter-layout-3 .rt-counter-box' => 'column-gap: {{SIZE}}{{UNIT}};',
-				],
-				'condition' => [
-					'layout' => 'layout-3',
-				],
-			]
-		);
-
-		$this->add_responsive_control(
-			'icon_width',
-			[
-				'label'      => __( 'Icon Width', 'fasheno-core' ),
-				'type'       => Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range'      => [
-					'px' => [
-						'min'  => 0,
-						'max'  => 100,
-						'step' => 1,
-					],
-				],
-				'selectors'  => [
-					'{{WRAPPER}} .rt-counter-layout .bg-shape' => 'width: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
-		$this->add_responsive_control(
-			'icon_height',
-			[
-				'label'      => __( 'Icon Height', 'fasheno-core' ),
-				'type'       => Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range'      => [
-					'px' => [
-						'min'  => 0,
-						'max'  => 100,
-						'step' => 1,
-					],
-				],
-				'selectors'  => [
-					'{{WRAPPER}} .rt-counter-layout .bg-shape' => 'height: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
-
-		$this->end_controls_section();
-
-		// Box Style
+		// Box setting
 		$this->start_controls_section(
 			'box_style',
 			[
@@ -429,16 +361,83 @@ class Counter extends ElementorBase {
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
+
+		$this->add_responsive_control(
+			'box_item_gap',
+			[
+				'label'      => __( 'Item Gap', 'fasheno-core' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => [ 'px' ],
+				'range'      => [
+					'px' => [
+						'min'  => 0,
+						'max'  => 100,
+						'step' => 1,
+					],
+				],
+				'selectors'  => [
+					'{{WRAPPER}} .rt-countdown-layout' => 'gap: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
 		$this->add_control(
-			'box_color',
+			'box_bg_color',
 			[
 				'type'      => Controls_Manager::COLOR,
 				'label'     => esc_html__( 'Background Color', 'fasheno-core' ),
 				'selectors' => [
-					'{{WRAPPER}} .rt-counter-layout .rt-counter-box' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .countdown-section' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
+
+		$this->add_responsive_control(
+			'box_width',
+			[
+				'label'      => __( 'Box Width', 'fasheno-core' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => [ 'px' ],
+				'range'      => [
+					'px' => [
+						'min'  => 0,
+						'max'  => 200,
+						'step' => 1,
+					],
+				],
+				'selectors'  => [
+					'{{WRAPPER}} .countdown-section' => 'width: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+		$this->add_responsive_control(
+			'box_height',
+			[
+				'label'      => __( 'Box Height', 'fasheno-core' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => [ 'px' ],
+				'range'      => [
+					'px' => [
+						'min'  => 0,
+						'max'  => 200,
+						'step' => 1,
+					],
+				],
+				'selectors'  => [
+					'{{WRAPPER}} .countdown-section' => 'height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name'     => 'box_border',
+				'label'    => __( 'Border', 'fasheno-core' ),
+				'selector' => '{{WRAPPER}} .countdown-section',
+			]
+		);
+
 		$this->add_group_control(
 			Group_Control_Box_Shadow::get_type(),
 			[
@@ -446,28 +445,10 @@ class Counter extends ElementorBase {
 				'exclude' => [
 					'box_shadow_position',
 				],
-				'selector' => '{{WRAPPER}} .rt-counter-layout .rt-counter-box',
+				'selector' => '{{WRAPPER}} .countdown-section',
 			]
 		);
-		$this->add_group_control(
-			\Elementor\Group_Control_Border::get_type(),
-			[
-				'name'     => 'box_border',
-				'label'    => __( 'Border', 'fasheno-core' ),
-				'selector' => '{{WRAPPER}} .rt-counter-layout .rt-counter-box',
-			]
-		);
-		$this->add_responsive_control(
-			'box_padding',
-			[
-				'label'              => __( 'Padding', 'fasheno-core' ),
-				'type'               => Controls_Manager::DIMENSIONS,
-				'size_units'         => [ 'px' ],
-				'selectors'          => [
-					'{{WRAPPER}} .rt-counter-layout .rt-counter-box' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-				],
-			]
-		);
+
 		$this->add_responsive_control(
 			'box_radius',
 			[
@@ -475,7 +456,7 @@ class Counter extends ElementorBase {
 				'type'               => Controls_Manager::DIMENSIONS,
 				'size_units'         => [ 'px' ],
 				'selectors'          => [
-					'{{WRAPPER}} .rt-counter-layout .rt-counter-box' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+					'{{WRAPPER}} .countdown-section' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
 				],
 				'separator' => 'before',
 			]
@@ -483,7 +464,7 @@ class Counter extends ElementorBase {
 
 		$this->end_controls_section();
 
-		//Animation setting
+		// Animation setting
 		$this->start_controls_section(
 			'animation_style',
 			[
@@ -580,7 +561,7 @@ class Counter extends ElementorBase {
 	protected function render() {
 		$data  = $this->get_settings();
 		$template = 'view-1';
-		Fns::get_template( "elementor/counter/$template", $data );
+		Fns::get_template( "elementor/countdown/$template", $data );
 	}
 
 }

@@ -38,7 +38,7 @@ if ( isset( $_GET['product_cat'] ) ) {
 						<div class="cat-btn-wrap">
 							<button class="rt-btn cat-toggle" type="button" id="dropdownMenuButtonAddon" data-bs-toggle="dropdown" aria-expanded="false">
 								<span class="cat-label"><?php echo esc_html( $label );?></span>
-								<span class="icon"><i class="down-arrow icon-rt-filter"></i></span>
+								<span class="icon"><i class="down-arrow icon-rt-angle-down-1"></i></span>
 							</button>
 							<ul class="dropdown-menu rt-drop-menu" aria-labelledby="dropdownMenuButtonAddon">
 								<li data-slug=""><?php echo esc_html( $all_label );?></li>
@@ -57,7 +57,7 @@ if ( isset( $_GET['product_cat'] ) ) {
 						<input type="text" autocomplete="off" name="s" class="form-control product-search-form product-autocomplete-js" placeholder="<?php esc_attr_e( 'Type Your Products ...', 'fasheno-core' );?>" value="<?php echo esc_attr( $search );?>">
 						<div class="input-group-append">
 							<input type="hidden" name="post_type" value="product">
-							<button class="search-btn"><i class="icon-rt-search-1"></i></button>
+							<button class="search-btn"><i class="icon-rt-search-2"></i></button>
 						</div>
 					</div>
 				</li>

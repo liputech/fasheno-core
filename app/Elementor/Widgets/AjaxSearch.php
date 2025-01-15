@@ -204,6 +204,30 @@ class AjaxSearch extends ElementorBase {
 		);
 
 		$this->add_responsive_control(
+			'input_width',
+			[
+				'type'    => Controls_Manager::SLIDER,
+				'mode'          => 'responsive',
+				'label'   => esc_html__( 'Width', 'fasheno-core' ),
+				'size_units' => [ '%', 'px' ],
+				'range' => [
+					'%' => [
+						'min' => 0,
+						'max' => 100,
+					],
+					'px' => [
+						'min' => 0,
+						'max' => 800,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .rt-search-box-form .search-box-input' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .rt-search-box-wrap form' => 'width: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
 			'input_padding',
 			[
 				'label'              => __( 'Padding', 'fasheno-core' ),

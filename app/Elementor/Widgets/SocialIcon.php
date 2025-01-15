@@ -41,7 +41,7 @@ class SocialIcon extends ElementorBase {
 				'type'      => \Elementor\Controls_Manager::ICONS,
 				'fa4compatibility' => 'social',
 				'default' => [
-					'value' => 'icon-rt-facebook',
+					'value' => 'icon-rt-facebook-1',
 					'library' => 'rt-brands',
 				],
 			]
@@ -119,25 +119,25 @@ class SocialIcon extends ElementorBase {
 					[
 						'title' => 'Facebook',
 						'social_icon' => [
-							'value' => 'icon-rt-facebook',
+							'value' => 'icon-rt-facebook-1',
 						],
 					],
 					[
 						'title' => 'Twitter',
 						'social_icon' => [
-							'value' => 'icon-rt-x-twitter',
+							'value' => 'icon-rt-twitter-1',
 						],
 					],
 					[
 						'title' => 'Instagram',
 						'social_icon' => [
-							'value' => 'icon-rt-instagram',
+							'value' => 'icon-rt-instagram-1',
 						],
 					],
 					[
 						'title' => 'Pinterest',
 						'social_icon' => [
-							'value' => 'icon-rt-pinterest',
+							'value' => 'icon-rt-pinterest-1',
 						],
 					],
 				],
@@ -213,8 +213,7 @@ class SocialIcon extends ElementorBase {
 
 		$this->end_controls_section();
 
-		// Title Settings
-		//==============================================================
+		// Label Settings
 		$this->start_controls_section(
 			'label_settings',
 			[

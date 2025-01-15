@@ -62,74 +62,53 @@ class RTDemoimport {
 
 		$demos_array = array(
 			'demo1' => array(
-				'title'             => __( 'Finance Consultancy', 'fasheno-core' ),
+				'title'             => __( 'Default Home', 'fasheno-core' ),
 				'page'              => __( 'Home 01', 'fasheno-core' ),
-				'categories'        => [ 'Finance' ],
+				'categories'        => [ 'Tab 01' ],
 				'screenshot'        => RDTHEME_CORE_BASE_URL . 'screenshots/1.png',
 				'preview_link'      => 'https://radiustheme.com/demo/wordpress/themes/fasheno/',
 			),
 			'demo2' => array(
-				'title'             => __( 'Finance Software', 'fasheno-core' ),
+				'title'             => __( 'Fashion Home_02', 'fasheno-core' ),
 				'page'              => __( 'Home 02', 'fasheno-core' ),
-				'categories'        => [ 'Business' ],
+				'categories'        => [ 'Tab 02' ],
 				'screenshot'        => RDTHEME_CORE_BASE_URL . 'screenshots/2.png',
 				'preview_link'      => 'https://radiustheme.com/demo/wordpress/themes/fasheno/home-02/',
 			),
 			'demo3' => array(
-				'title'             => __( 'Online Banking', 'fasheno-core' ),
+				'title'             => __( 'Fashion Home_03', 'fasheno-core' ),
 				'page'              => __( 'Home 03', 'fasheno-core' ),
-				'categories'        => [ 'Business' ],
+				'categories'        => [ 'Tab 01' ],
 				'screenshot'        => RDTHEME_CORE_BASE_URL . 'screenshots/3.png',
 				'preview_link'      => 'https://radiustheme.com/demo/wordpress/themes/fasheno/home-03/',
 			),
 			'demo4' => array(
-				'title'             => __( 'Tax Advisory', 'fasheno-core' ),
+				'title'             => __( 'Fashion Home_04', 'fasheno-core' ),
 				'page'              => __( 'Home 04', 'fasheno-core' ),
-				'categories'        => [ 'Finance' ],
+				'categories'        => [ 'Tab 02' ],
 				'screenshot'        => RDTHEME_CORE_BASE_URL . 'screenshots/4.png',
 				'preview_link'      => 'https://radiustheme.com/demo/wordpress/themes/fasheno/home-04/',
 			),
 			'demo5' => array(
-				'title'             => __( 'Finance Insurance', 'fasheno-core' ),
+				'title'             => __( 'Fashion Home_05', 'fasheno-core' ),
 				'page'              => __( 'Home 05', 'fasheno-core' ),
-				'categories'        => [ 'Finance' ],
+				'categories'        => [ 'Tab 01' ],
 				'screenshot'        => RDTHEME_CORE_BASE_URL . 'screenshots/5.png',
 				'preview_link'      => 'https://radiustheme.com/demo/wordpress/themes/fasheno/home-05/',
 			),
 			'demo6' => array(
-				'title'             => __( 'Finance Loan', 'fasheno-core' ),
+				'title'             => __( 'Fashion Home_06', 'fasheno-core' ),
 				'page'              => __( 'Home 06', 'fasheno-core' ),
-				'categories'        => [ 'Finance' ],
+				'categories'        => [ 'Tab 02' ],
 				'screenshot'        => RDTHEME_CORE_BASE_URL . 'screenshots/6.png',
 				'preview_link'      => 'https://radiustheme.com/demo/wordpress/themes/fasheno/home-06/',
 			),
 			'demo7' => array(
-				'title'             => __( 'Finance Audit', 'fasheno-core' ),
+				'title'             => __( 'Fashion Home_07', 'fasheno-core' ),
 				'page'              => __( 'Home 07', 'fasheno-core' ),
-				'categories'        => [ 'Finance' ],
+				'categories'        => [ 'Tab 01' ],
 				'screenshot'        => RDTHEME_CORE_BASE_URL . 'screenshots/7.png',
 				'preview_link'      => 'https://radiustheme.com/demo/wordpress/themes/fasheno/home-07/',
-			),
-			'demo8' => array(
-				'title'             => __( 'Finance Cash Back', 'fasheno-core' ),
-				'page'              => __( 'Home 08', 'fasheno-core' ),
-				'categories'        => [ 'Finance' ],
-				'screenshot'        => RDTHEME_CORE_BASE_URL . 'screenshots/8.png',
-				'preview_link'      => 'https://radiustheme.com/demo/wordpress/themes/fasheno/home-08/',
-			),
-			'demo9' => array(
-				'title'             => __( 'Investment', 'fasheno-core' ),
-				'page'              => __( 'Home 09', 'fasheno-core' ),
-				'categories'        => [ 'Business' ],
-				'screenshot'        => RDTHEME_CORE_BASE_URL . 'screenshots/9.png',
-				'preview_link'      => 'https://radiustheme.com/demo/wordpress/themes/fasheno/home-09/',
-			),
-			'demo10' => array(
-				'title'             => __( 'Finance Accountant', 'fasheno-core' ),
-				'page'              => __( 'Home 10', 'fasheno-core' ),
-				'categories'        => [ 'Finance' ],
-				'screenshot'        => RDTHEME_CORE_BASE_URL . 'screenshots/10.png',
-				'preview_link'      => 'https://radiustheme.com/demo/wordpress/themes/fasheno/home-10/',
 			),
 		);
 
@@ -524,6 +503,9 @@ class RTDemoimport {
 				'type' => 'color',
 			],
 			'size'     => [
+				'type' => 'button',
+			],
+			'brand'     => [
 				'type' => 'button',
 			],
 		];

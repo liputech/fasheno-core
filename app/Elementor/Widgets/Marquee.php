@@ -63,11 +63,11 @@ class Marquee extends ElementorBase {
 				'fields'      => $repeater->get_controls(),
 				'title_field' => '{{{ title }}}',
 				'default'     => [
-					[ 'title' => 'Marketing Agency', ],
-					[ 'title' => 'Let Talk', ],
-					[ 'title' => 'Web Design Agency', ],
-					[ 'title' => 'Modern Technology', ],
-					[ 'title' => 'Web Development', ],
+					[ 'title' => 'Holiday gift guide', ],
+					[ 'title' => 'Shop gifts that were crafted with care', ],
+					[ 'title' => 'Free ground shipping on all orders', ],
+					[ 'title' => 'First your free trial and enjoy 1 months of fasheno for $2/month on select plans.', ],
+					[ 'title' => 'Next your pro enjoy 5 months of fasheno for $10/month on select plans.', ],
 				],
 			]
 		);
@@ -235,36 +235,7 @@ class Marquee extends ElementorBase {
 				'type'      => Controls_Manager::COLOR,
 				'label'     => esc_html__( 'Title Hover Color', 'fasheno-core' ),
 				'selectors' => [
-					'{{WRAPPER}} .rt-marquee-slider .rt-marquee-item .entry-title:before' => 'color: {{VALUE}}',
-				],
-			]
-		);
-
-		$this->add_control(
-			'title_shadow_color',
-			[
-				'type'      => Controls_Manager::COLOR,
-				'label'     => esc_html__( 'Title Stroke Color', 'fasheno-core' ),
-				'selectors' => [
-					'{{WRAPPER}} .rt-marquee-slider .rt-marquee-item .entry-title' => '-webkit-text-stroke-color: {{VALUE}}',
-				],
-			]
-		);
-
-		$this->add_responsive_control(
-			'title_stroke_width',
-			[
-				'type'    => Controls_Manager::SLIDER,
-				'label'   => esc_html__( 'Stroke Width', 'fasheno-core' ),
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 20,
-					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .rt-marquee-slider .rt-marquee-item .entry-title' => '-webkit-text-stroke-width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .rt-marquee-slider .rt-marquee-item .entry-title a:hover' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -324,8 +295,8 @@ class Marquee extends ElementorBase {
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
-					'value' => 'fas fa-paper-plane',
-					'library' => 'fa-solid',
+					'value' => 'icon-rt-paper-plane',
+					'library' => 'solid',
 				],
 				'condition' => [
 					'icon_type' => ['icon'],

@@ -74,8 +74,8 @@ use Elementor\Icons_Manager;
 
 		<?php if ( $display_arrow == 'yes' ) { ?>
             <div class="swiper-navigation">
-                <div class="swiper-button swiper-button-prev"><i class="icon-rt-left-arrow"></i></div>
-                <div class="swiper-button swiper-button-next"><i class="icon-rt-right-arrow"></i></div>
+                <div class="swiper-button swiper-button-prev"><i class="icon-rt-prev"></i></div>
+                <div class="swiper-button swiper-button-next"><i class="icon-rt-next"></i></div>
             </div>
 		<?php } ?>
 		<?php if ( $display_pagination == 'yes' ) { ?>

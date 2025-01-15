@@ -45,7 +45,7 @@ foreach ( $terms as $category ) {
                         <?php echo esc_html( $button_text );?>
                     </button>
 				<?php } else { ?>
-                    <button class="search-btn rt-search-hide-text coolBeans btn-dark rt-search-box-btn" type="submit"><i class="icon-rt-filter-2"></i> </button>
+                    <button class="search-btn rt-search-hide-text coolBeans btn-dark rt-search-box-btn" type="submit"><i class="icon-rt-search-2"></i> </button>
 				<?php } ?>
             </div>
         </form>

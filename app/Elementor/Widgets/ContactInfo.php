@@ -63,8 +63,8 @@ class ContactInfo extends ElementorBase {
 				'type'      => \Elementor\Controls_Manager::ICONS,
 				'label'   => esc_html__( 'Icon', 'fasheno-core' ),
 				'default' => [
-					'value' => 'fas fa-map-marker-alt',
-					'library' => 'fa-solid',
+					'value' => 'icon-rt-map',
+					'library' => 'solid',
 				],
 				'condition' => [
 					'list_type' => 'icon_list',
@@ -257,15 +257,31 @@ class ContactInfo extends ElementorBase {
 				'selector' => '{{WRAPPER}} .rt-contact-info .contact-list li',
 			]
 		);
-		
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name'     => 'list_link_typo',
+				'label'    => esc_html__( 'List Link Typo', 'fasheno-core' ),
+				'selector' => '{{WRAPPER}} .rt-contact-info .contact-list li a',
+			]
+		);
+
 		$this->add_responsive_control(
 			'list_item_spacing',
 			[
-				'label'              => __( 'List Spacing', 'fasheno-core' ),
-				'type'               => Controls_Manager::DIMENSIONS,
-				'size_units'         => [ 'px' ],
-				'selectors'          => [
-					'{{WRAPPER}} .rt-contact-info .contact-list li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+				'label'      => __( 'List Item Space', 'fasheno-core' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => [ 'px' ],
+				'range'      => [
+					'px' => [
+						'min'  => 0,
+						'max'  => 50,
+						'step' => 1,
+					],
+				],
+				'selectors'  => [
+					'{{WRAPPER}} .rt-contact-info .contact-list li'   => 'margin-bottom: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -299,7 +315,7 @@ class ContactInfo extends ElementorBase {
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'list_item_heading_space',
 			[
 				'label'      => __( 'List Heading Space', 'fasheno-core' ),
@@ -327,7 +343,7 @@ class ContactInfo extends ElementorBase {
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'list_item_icon_size',
 			[
 				'label'      => __( 'List Icon Size', 'fasheno-core' ),
@@ -357,7 +373,7 @@ class ContactInfo extends ElementorBase {
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'list_item_icon_space',
 			[
 				'label'      => __( 'List Icon Space', 'fasheno-core' ),
@@ -379,7 +395,7 @@ class ContactInfo extends ElementorBase {
 		$this->add_control(
 			'phone_list_heading',
 			[
-				'label'     => __( 'Phone Number Setting', 'fasheno-core' ),
+				'label'     => __( 'Phone Setting', 'fasheno-core' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -401,6 +417,35 @@ class ContactInfo extends ElementorBase {
 				'label'     => esc_html__( 'Phone Color', 'fasheno-core' ),
 				'selectors' => [
 					'{{WRAPPER}} .rt-contact-info .contact-list li.phone-no a' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_control(
+			'email_list_heading',
+			[
+				'label'     => __( 'E-mail Setting', 'fasheno-core' ),
+				'type'      => \Elementor\Controls_Manager::HEADING,
+				'separator' => 'before',
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name'     => 'list_item_email_typo',
+				'label'    => esc_html__( 'Email Typo', 'fasheno-core' ),
+				'selector' => '{{WRAPPER}} .rt-contact-info .contact-list li.email a',
+			]
+		);
+
+		$this->add_control(
+			'list_item_email_color',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => esc_html__( 'Email Color', 'fasheno-core' ),
+				'selectors' => [
+					'{{WRAPPER}} .rt-contact-info .contact-list li.email a' => 'color: {{VALUE}}',
 				],
 			]
 		);

@@ -68,7 +68,7 @@ if ( $button ) {
 
 		<?php if ( $search == 'yes' ) { ?>
             <li class="rt-search-popup">
-                <a class="action-icon menu-search-bar rt-search-trigger" href="#header-search" aria-label="search popup"><i class="icon-rt-search-1"></i></a>
+                <a class="action-icon menu-search-bar rt-search-trigger" href="#header-search" aria-label="search popup"><i class="icon-rt-search-2"></i></a>
             </li>
 		<?php } ?>
 
@@ -108,15 +108,13 @@ if ( $button ) {
 		<?php if ( $button == 'yes' ) { ?>
 			<li class="rt-action-button rt-button">
 				<a class="btn button-2" <?php echo $attr; ?> aria-label="button link">
-					<?php if ( $button_text ) { ?><?php echo esc_html( $button_text );?><?php } ?><?php if( $button_icon ) { ?><?php \Elementor\Icons_Manager::render_icon( $button_icon ); ?><?php } ?>
+					<?php if( $button_icon ) { ?><span><?php \Elementor\Icons_Manager::render_icon( $button_icon ); ?></span><?php } ?><?php if ( $button_text ) { ?><?php echo esc_html( $button_text );?><?php } ?>
 				</a>
 			</li>
 		<?php } ?>
 
 		<?php if ( $hamburger == 'yes' ) { ?>
-			<?php fasheno_hanburger( 'desktop-hamburg' ); ?>
+			<?php fasheno_hanburger( 'mobile-hamburg' ); ?>
 		<?php } ?>
-
-		<?php fasheno_hanburger( 'mobile-hamburg' ); ?>
 	</ul>
 </div>

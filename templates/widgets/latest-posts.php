@@ -18,7 +18,7 @@ $post_classes = 'rt-blog-post';
 
 	        <?php $rt_youtube_link = get_post_meta( get_the_ID(), 'rt_youtube_link', true );
 	        if ( fasheno_option( 'rt_video_visibility' ) == 1 && ( 'video' == get_post_format( get_the_ID() ) ) && !empty( $rt_youtube_link ) ) { ?>
-                <div class="rt-video"><a class="popup-youtube video-popup-icon" href="<?php echo esc_url( $rt_youtube_link );?>"><i class="icon-rt-play"></i></a></div>
+                <div class="rt-video"><a class="popup-youtube video-popup-icon" href="<?php echo esc_url( $rt_youtube_link );?>"><i class="icon-rt-play-stroke"></i></a></div>
 	        <?php } ?>
         </div>
 	    <?php } ?>

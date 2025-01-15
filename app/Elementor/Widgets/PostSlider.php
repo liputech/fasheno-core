@@ -2018,10 +2018,11 @@ class PostSlider extends ElementorBase {
 						echo '</article>';
                         $ade = $ade + 200; $adu = $adu + 0; endwhile; ?>
                     </div>
+
 	                <?php if ( $data['display_arrow']  == 'yes' ) { ?>
                         <div class="swiper-navigation">
-                            <div class="swiper-button swiper-button-prev"><i class="icon-rt-left-arrow"></i></div>
-                            <div class="swiper-button swiper-button-next"><i class="icon-rt-right-arrow"></i></div>
+                            <div class="swiper-button swiper-button-prev"><i class="icon-rt-prev"></i></div>
+                            <div class="swiper-button swiper-button-next"><i class="icon-rt-next"></i></div>
                         </div>
 	                <?php } ?>
 	                <?php if ( $data['display_pagination'] == 'yes' ) { ?>
@@ -2031,6 +2032,7 @@ class PostSlider extends ElementorBase {
 			<?php endif; ?>
 			<?php wp_reset_postdata(); ?>
         </div>
+
 		<?php
 	}
 }

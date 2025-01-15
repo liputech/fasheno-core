@@ -99,7 +99,7 @@ class CopyRight extends ElementorBase {
 			]
 		);
 
-		// Button Icon Settings
+		// Copyright Settings
 		$this->add_control(
 			'copyright_style_heading',
 			[
@@ -193,8 +193,6 @@ class CopyRight extends ElementorBase {
 				],
 			]
 		);
-
-
 
 		$this->end_controls_section();
 

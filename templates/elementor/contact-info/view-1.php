@@ -43,7 +43,7 @@
                 }
             ?>
 
-            <li class="list <?php if( preg_match('/^[0-9\-\(\)\/\+\s]*$/', $data_type ) ) { ?>phone-no<?php } ?>">
+            <li class="list <?php if( preg_match('/^[0-9\-\(\)\/\+\s]*$/', $data_type ) ) { ?>phone-no<?php } ?><?php if( filter_var($data_type, FILTER_VALIDATE_EMAIL) ) { ?>email<?php } ?>">
                 <?php if ( $item['list_type'] == 'icon_list' ) { ?>
                     <?php if( !empty($item['list_icon']) ) { ?>
                         <?php \Elementor\Icons_Manager::render_icon( $item['list_icon'], [ 'aria-hidden' => 'true' ] ); ?>

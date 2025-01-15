@@ -139,7 +139,7 @@ class SpecialOffer extends ElementorBase {
 				'type'      => \Elementor\Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default'          => [
-					'value'   => 'icon-rt-right-arrow',
+					'value'   => 'icon-rt-next',
 					'library' => 'solid',
 				],
 			]

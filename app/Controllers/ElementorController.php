@@ -20,29 +20,24 @@ use RT\FashenoCore\Elementor\Widgets\HeroSlider;
 use RT\FashenoCore\Elementor\Widgets\ContactInfo;
 use RT\FashenoCore\Elementor\Widgets\Image;
 use RT\FashenoCore\Elementor\Widgets\ImageBox;
-use RT\FashenoCore\Elementor\Widgets\ImageGallery;
 use RT\FashenoCore\Elementor\Widgets\SpecialOffer;
 use RT\FashenoCore\Elementor\Widgets\SocialIcon;
 use RT\FashenoCore\Elementor\Widgets\InfoBox;
-use RT\FashenoCore\Elementor\Widgets\OpeningHour;
 use RT\FashenoCore\Elementor\Widgets\Marquee;
 use RT\FashenoCore\Elementor\Widgets\VideoIcon;
+use RT\FashenoCore\Elementor\Widgets\Currency;
 use RT\FashenoCore\Elementor\Widgets\Counter;
-use RT\FashenoCore\Elementor\Widgets\Rating;
-use RT\FashenoCore\Elementor\Widgets\ProgressBar;
+use RT\FashenoCore\Elementor\Widgets\CountDown;
 use RT\FashenoCore\Elementor\Widgets\LogoBrand;
 use RT\FashenoCore\Elementor\Widgets\Testimonial;
-use RT\FashenoCore\Elementor\Widgets\PricingTable;
-use RT\FashenoCore\Elementor\Widgets\PricingTab;
 use RT\FashenoCore\Elementor\Widgets\Tab;
 use RT\FashenoCore\Elementor\Widgets\Post;
 use RT\FashenoCore\Elementor\Widgets\PostSlider;
-use RT\FashenoCore\Elementor\Widgets\CaseStudy;
+use RT\FashenoCore\Elementor\Widgets\ImageTab;
 use RT\FashenoCore\Elementor\Widgets\SiteLogo;
 use RT\FashenoCore\Elementor\Widgets\SiteMenu;
 use RT\FashenoCore\Elementor\Widgets\MenuIcons;
 use RT\FashenoCore\Elementor\Widgets\AjaxSearch;
-use RT\FashenoCore\Elementor\Widgets\Download;
 use RT\FashenoCore\Elementor\Widgets\IconLists;
 use RT\FashenoCore\Elementor\Widgets\CopyRight;
 
@@ -116,29 +111,24 @@ class ElementorController {
 			ContactInfo::class,
 			Image::class,
 			ImageBox::class,
-			ImageGallery::class,
 			SpecialOffer::class,
-			ProgressBar::class,
 			SocialIcon::class,
 			VideoIcon::class,
+			Currency::class,
 			Counter::class,
+			CountDown::class,
 			Marquee::class,
-			Rating::class,
 			InfoBox::class,
-			OpeningHour::class,
-			PricingTable::class,
-			PricingTab::class,
 			Tab::class,
 			LogoBrand::class,
 			Testimonial::class,
 			Post::class,
 			PostSlider::class,
-			CaseStudy::class,
+			ImageTab::class,
 			SiteLogo::class,
 			SiteMenu::class,
 			MenuIcons::class,
 			AjaxSearch::class,
-			Download::class,
 			IconLists::class,
 			CopyRight::class,
 		];
@@ -196,7 +186,7 @@ class ElementorController {
 			'labelIcon'     => 'fab fa-elementor',
 			'prefix'        => '',
 			'displayPrefix' => '',
-			'url'           => fasheno_get_file( '/assets/vendor/fontello.css' ),
+			'url'           => fasheno_get_file( '/assets/vendor/rt-fontello.css' ),
 			'icons'         => array_keys($fontello_icons),
 			'ver'           => '1.0',
 		];

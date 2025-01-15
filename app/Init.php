@@ -11,6 +11,7 @@
 namespace RT\FashenoCore;
 use RT\FashenoCore\Hooks\FilterHooks;
 use RT\FashenoCore\Hooks\ActionHooks;
+use RT\FashenoCore\Hooks\ShopBuilderHooks;
 
 use RT\FashenoCore\Traits\SingletonTraits;
 
@@ -35,6 +36,7 @@ final class Init {
 	public function after_theme_loaded() {
 		FilterHooks::instance();
 		ActionHooks::instance();
+		ShopBuilderHooks::instance();
 		Controllers\ScriptController::instance();
 		Modules\WidgetOverwrite::instance();
 		Api\RestApi::instance();

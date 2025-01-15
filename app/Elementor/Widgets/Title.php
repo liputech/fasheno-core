@@ -158,7 +158,7 @@ class Title extends ElementorBase {
 				'type'      => \Elementor\Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default'          => [
-					'value'   => 'icon-rt-correct',
+					'value'   => 'icon-rt-check-1',
 					'library' => 'solid',
 				],
 			]
@@ -391,10 +391,12 @@ class Title extends ElementorBase {
 				'label'   => __( 'Choose Icons', 'fasheno-core' ),
 				'type'    => \Elementor\Controls_Manager::ICON,
 				'include' => [
-					'icon-rt-arrow-right-1',
-					'icon-rt-correct',
-					'icon-rt-arrow-vector',
-					'icon-rt-chevron-right',
+					'icon-rt-flash',
+					'icon-rt-check-1',
+					'icon-rt-paper-plane',
+					'icon-rt-map',
+					'icon-rt-next',
+					'icon-rt-prev',
 				],
 				'default' => '',
 			]

@@ -38,6 +38,7 @@ if ( !empty( $link['url'] ) ) {
 	$attr .= !empty( $link['nofollow'] ) ? ' rel="nofollow"' : '';
 	$attr .= ' aria-label="info link"';
 }
+
 $range_one = ( $scroll_animation == 'yes' ) ? $range_one : '';
 $range_two = ( $scroll_animation == 'yes' ) ? $range_two : '';
 

@@ -87,7 +87,7 @@ class InfoBox extends ElementorBase {
 				'type'             => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default'          => [
-					'value'   => 'icon-rt-location-2',
+					'value'   => 'icon-rt-map',
 					'library' => 'solid',
 				],
 				'condition'        => [
@@ -964,11 +964,8 @@ class InfoBox extends ElementorBase {
 				'label'     => __( 'Button Icon', 'fasheno-core' ),
 				'type'      => \Elementor\Controls_Manager::ICONS,
 				'default'   => [
-					'value'   => 'icon-rt-right-arrow',
+					'value'   => 'icon-rt-next',
 					'library' => 'solid',
-				],
-				'condition' => [
-					'show_btn_icon' => 'yes',
 				],
 			]
 		);
@@ -989,9 +986,6 @@ class InfoBox extends ElementorBase {
 				'selectors'  => [
 					'{{WRAPPER}} .rt-info-box .rt-button .btn i'   => 'font-size:{{SIZE}}{{UNIT}};',
 					'{{WRAPPER}} .rt-info-box .rt-button .btn svg' => 'width:{{SIZE}}{{UNIT}}; height:{{SIZE}}{{UNIT}};',
-				],
-				'condition'  => [
-					'show_btn_icon' => 'yes',
 				],
 			]
 		);
@@ -1208,6 +1202,29 @@ class InfoBox extends ElementorBase {
 		);
 
 		$this->add_responsive_control(
+			'box_height',
+			[
+				'type'       => Controls_Manager::SLIDER,
+				'label'      => esc_html__( 'Box Height', 'fasheno-core' ),
+				'size_units' => [ 'px' ],
+				'range'      => [
+					'px' => [
+						'min'  => 0,
+						'max'  => 850,
+						'step' => 1,
+					],
+				],
+				'selectors'  => [
+					'{{WRAPPER}} .rt-info-box .info-box'   => 'height: {{SIZE}}{{UNIT}}; display: flex; flex-direction: column; justify-content: center;',
+				],
+				'condition' => [
+					'layout' => [ 'layout-3' ],
+				],
+
+			]
+		);
+
+		$this->add_responsive_control(
 			'box_radius',
 			[
 				'label'      => __( 'Border Radius', 'fasheno-core' ),
@@ -1356,7 +1373,6 @@ class InfoBox extends ElementorBase {
 					'pulse' => esc_html__( 'pulse', 'fasheno-core' ),
 					'headShake' => esc_html__( 'headShake', 'fasheno-core' ),
 					'swing' => esc_html__( 'swing', 'fasheno-core' ),
-					'hinge' => esc_html__( 'hinge', 'fasheno-core' ),
 					'hinge' => esc_html__( 'hinge', 'fasheno-core' ),
 					'flipInX' => esc_html__( 'flipInX', 'fasheno-core' ),
 					'flipInY' => esc_html__( 'flipInY', 'fasheno-core' ),

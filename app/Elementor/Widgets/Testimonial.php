@@ -190,7 +190,7 @@ class Testimonial extends ElementorBase {
 				'type'      => \Elementor\Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default'          => [
-					'value'   => 'icon-rt-quote-2',
+					'value'   => 'icon-rt-quote-up',
 					'library' => 'solid',
 				],
 			]

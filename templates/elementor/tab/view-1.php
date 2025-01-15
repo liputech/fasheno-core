@@ -13,7 +13,6 @@
  * @var $duration           string
  */
 
-
 ?>
 
 <div class="rt-tab-block rt-tab-<?php echo esc_attr( $layout ); ?>">

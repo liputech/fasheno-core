@@ -230,6 +230,9 @@ class ElmentorBuilderController {
 			<?php }
 		}
 		?>
+
+        <?php fasheno_mobile_menu_icons_group(); ?>
+
         <header id="masthead" class="site-header headroom fasheno-header-builder" role="banner">
 			<?php Builder::get_elementor_content( 'header' ); ?>
         </header>

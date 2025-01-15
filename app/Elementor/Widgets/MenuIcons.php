@@ -130,13 +130,16 @@ class MenuIcons extends ElementorBase {
 				'label'       => esc_html__( 'Direction', 'fasheno-core' ),
 				'type'        => Controls_Manager::SELECT2,
 				'options'   => [
-					'row' => __( 'Default', 'fasheno-core' ),
+					' ' => __( 'Default', 'fasheno-core' ),
+					'row' => __( 'Row', 'fasheno-core' ),
 					'row-reverse' => __( 'Reverse', 'fasheno-core' ),
+					'column' => __( 'Column', 'fasheno-core' ),
+					'column-reverse' => __( 'Column Reverse', 'fasheno-core' ),
 				],
 				'selectors' => [
 					'{{WRAPPER}} .menu-icon-wrapper .menu-icon-action' => 'flex-direction: {{VALUE}};',
 				],
-				'default'     => 'row',
+				'default'     => ' ',
 			]
 		);
 
@@ -179,7 +182,7 @@ class MenuIcons extends ElementorBase {
 				'type'      => \Elementor\Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default'          => [
-					'value'   => 'icon-rt-right-arrow',
+					'value'   => 'icon-rt-next',
 					'library' => 'solid',
 				],
 				'condition'   => [
@@ -248,7 +251,7 @@ class MenuIcons extends ElementorBase {
 				'type'      => \Elementor\Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default'          => [
-					'value'   => 'icon-rt-user-1',
+					'value'   => 'icon-rt-user-2',
 					'library' => 'solid',
 				],
 				'condition'   => [
@@ -327,7 +330,7 @@ class MenuIcons extends ElementorBase {
 				'type'      => \Elementor\Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default'          => [
-					'value'   => 'icon-rt-phone-2',
+					'value'   => 'icon-rt-phone-call',
 					'library' => 'solid',
 				],
 				'condition'   => [
@@ -363,7 +366,7 @@ class MenuIcons extends ElementorBase {
 				'type'      => \Elementor\Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default'          => [
-					'value'   => 'icon-rt-cart',
+					'value'   => 'icon-rt-cart-2',
 					'library' => 'solid',
 				],
 				'condition'   => [
@@ -519,6 +522,7 @@ class MenuIcons extends ElementorBase {
 				'type'      => Controls_Manager::SWITCHER,
 				'label_on'  => esc_html__( 'On', 'fasheno-core' ),
 				'label_off' => esc_html__( 'Off', 'fasheno-core' ),
+				'description'=> esc_html__( 'Hamburg menu - Only show mobile device (max-width: 1024px)', 'fasheno-core' ),
 				'default'   => 'yes',
 			]
 		);

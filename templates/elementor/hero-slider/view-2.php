@@ -24,7 +24,7 @@ foreach ( $slider_items as $banner_list ) {
 		'content'           => $banner_list['content'],
 		'button_text'       => $banner_list['button_text'],
 		'button_url'        => $banner_list['button_url']['url'],
-		'img'               => $banner_list['banner_image'],
+		'img'               => $banner_list['banner_image']['url'] ? $banner_list['banner_image']['url'] : "",
 	);
 }
 
@@ -39,22 +39,22 @@ $slider_animation = ( $slider_animation == 'yes' ) ? 'rtFadeInUp' : '';
             foreach ($banners as $banner){ ?>
                 <div class="swiper-slide single-slide slide-<?php echo esc_attr( $i ); ?>">
                     <div class="single-slider">
-                        <div class="content-wrap">
-                            <div class="slider-image" data-swiper-animation="rtFadeIn" data-duration="0.2s" data-delay="1000ms">
-	                            <?php echo wp_get_attachment_image( $banner['img']['id'], 'full' ); ?>
-                            </div>
+                        <div class="img-container">
+                            <div class="hero-banner" data-bg-image="<?php echo esc_attr($banner['img']); ?>"></div>
+                        </div>
+                        <div class="container">
                             <div class="slider-content">
                                 <?php if( !empty( $banner['sub_title'] ) ) { ?>
-                                    <div class="sub-title" data-swiper-animation="<?php echo esc_attr( $slider_animation ); ?>" data-duration="0.5s" data-delay="2000ms">
-	                                    <?php \Elementor\Icons_Manager::render_icon( $banner['info_icon'] ); ?><?php echo fasheno_html( $banner['sub_title'], 'allow_title' );?>
+                                    <div class="sub-title" data-swiper-animation="<?php echo esc_attr( $slider_animation ); ?>" data-duration="0.5s" data-delay="1000ms">
+                                        <?php \Elementor\Icons_Manager::render_icon( $banner['info_icon'] ); ?><?php echo fasheno_html( $banner['sub_title'], 'allow_title' );?>
                                     </div>
                                 <?php } if( !empty( $banner['title'] ) ) { ?>
-                                    <<?php echo esc_attr( $title_tag ) ?> class="slider-title" data-swiper-animation="<?php echo esc_attr( $slider_animation ); ?>" data-duration="0.5s" data-delay="2500ms"><?php echo fasheno_html( $banner['title'], 'allow_title' );?></<?php echo esc_attr( $title_tag ) ?>>
+                                    <<?php echo esc_attr( $title_tag ) ?> class="slider-title" data-swiper-animation="<?php echo esc_attr( $slider_animation ); ?>" data-duration="0.5s" data-delay="1200ms"><?php echo fasheno_html( $banner['title'], 'allow_title' );?></<?php echo esc_attr( $title_tag ) ?>>
                                 <?php } if( !empty( $banner['content'] ) ) { ?>
-                                    <div class="slider-text" data-swiper-animation="<?php echo esc_attr( $slider_animation ); ?>" data-duration="0.5s" data-delay="3000ms"><?php echo fasheno_html( $banner['content'], 'allow_title' );?></div>
+                                    <div class="slider-text" data-swiper-animation="<?php echo esc_attr( $slider_animation ); ?>" data-duration="0.5s" data-delay="1400ms"><?php echo fasheno_html( $banner['content'], 'allow_title' );?></div>
                                 <?php } ?>
                                 <?php if( !empty( $banner['button_text'] ) ) { ?>
-                                    <div class="rt-button" data-swiper-animation="<?php echo esc_attr( $slider_animation ); ?>" data-duration="0.5s" data-delay="3500ms">
+                                    <div class="rt-button" data-swiper-animation="<?php echo esc_attr( $slider_animation ); ?>" data-duration="0.5s" data-delay="1600ms">
                                         <a class="btn button-<?php echo esc_attr( $button_style ); ?>" href="<?php echo esc_url( $banner['button_url'] ); ?>">
                                             <span><?php if( $button_icon ) { ?><?php \Elementor\Icons_Manager::render_icon( $button_icon ); ?><?php } ?><?php echo esc_html( $banner['button_text'] );?></span>
                                         </a>
