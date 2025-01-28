@@ -467,7 +467,7 @@ class SocialIcon extends ElementorBase {
 				'type'      => Controls_Manager::COLOR,
 				'label'     => esc_html__( 'Color', 'fasheno-core' ),
 				'selectors' => [
-					'{{WRAPPER}} .rt-social-icon .rt-social-item a:hover' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .rt-social-icon .rt-social-item a:hover' => 'color: {{VALUE}} !important',
 				],
 			]
 		);
@@ -478,7 +478,7 @@ class SocialIcon extends ElementorBase {
 				'type'      => Controls_Manager::COLOR,
 				'label'     => esc_html__( 'Background Color', 'fasheno-core' ),
 				'selectors' => [
-					'{{WRAPPER}} .rt-social-icon .rt-social-item a:hover' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .rt-social-icon .rt-social-item a:hover' => 'background-color: {{VALUE}} !important',
 				],
 			]
 		);

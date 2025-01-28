@@ -1,0 +1,1125 @@
+{
+    "rtsb_settings": {
+        "general": {
+            "notification": {
+                "active": "",
+                "notification_intro": "",
+                "notification_position": "top-right",
+                "notification_color": "#ff6c23",
+                "notification_btn_color": "#666666",
+                "notification_bg": "#f8f8f8",
+                "hide_notification": ""
+            },
+            "social_share": {
+                "active": "",
+                "social_share_intro": "",
+                "share_platforms": [
+                    "facebook",
+                    "twitter",
+                    "linkedin",
+                    "pinterest",
+                    "skype",
+                    "whatsapp"
+                ],
+                "share_platforms_to_product_page": "",
+                "share_icon_layout": "share-layout1"
+            },
+            "guest_user": {
+                "active": "",
+                "guest_user_intro": "",
+                "hide_pricing": "",
+                "custom_price_text": "Login to see prices",
+                "hide_add_to_cart": "",
+                "hide_badges": "",
+                "hide_cart_page": "",
+                "hide_checkout_page": ""
+            },
+            "tooltip": {
+                "active": "",
+                "tooltip_intro": "",
+                "tooltip_font_size": "13",
+                "tooltip_font_weight": "500",
+                "tooltip_color": "",
+                "tooltip_bg": ""
+            },
+            "billing_form": {
+                "active": "",
+                "checkout_billing_info": "",
+                "billing_first_name_heading": "",
+                "billing_first_name": [
+                    "show",
+                    "required"
+                ],
+                "billing_first_name_label": "",
+                "billing_first_name_placeholder": "",
+                "billing_last_name_heading": "",
+                "billing_last_name": [
+                    "show",
+                    "required"
+                ],
+                "billing_last_name_label": "",
+                "billing_last_name_placeholder": "",
+                "billing_company_heading": "",
+                "billing_company": [
+                    "show",
+                    "optional"
+                ],
+                "billing_company_label": "",
+                "billing_company_placeholder": "",
+                "billing_country_heading": "",
+                "billing_country": [
+                    "show",
+                    "required"
+                ],
+                "billing_country_label": "",
+                "billing_address_1_heading": "",
+                "billing_address_1": [
+                    "show",
+                    "required"
+                ],
+                "billing_address_1_label": "",
+                "billing_address_1_placeholder": "",
+                "billing_address_2_heading": "",
+                "billing_address_2": [
+                    "show",
+                    "optional"
+                ],
+                "billing_address_2_label": "",
+                "billing_address_2_placeholder": "",
+                "billing_city_heading": "",
+                "billing_city": [
+                    "show",
+                    "required"
+                ],
+                "billing_city_label": "",
+                "billing_city_placeholder": "",
+                "billing_state_heading": "",
+                "billing_state": [
+                    "show",
+                    "required"
+                ],
+                "billing_state_label": "",
+                "billing_postcode_heading": "",
+                "billing_postcode": [
+                    "show",
+                    "required"
+                ],
+                "billing_postcode_label": "",
+                "billing_postcode_placeholder": "",
+                "billing_phone_heading": "",
+                "billing_phone": [
+                    "show",
+                    "required"
+                ],
+                "billing_phone_label": "",
+                "billing_phone_placeholder": "",
+                "billing_email_heading": "",
+                "billing_email": [
+                    "show",
+                    "required"
+                ],
+                "billing_email_label": "",
+                "billing_email_placeholder": ""
+            },
+            "shipping_form": {
+                "active": "",
+                "checkout_shipping_info": "",
+                "shipping_first_name_heading": "",
+                "shipping_first_name": [
+                    "show",
+                    "required"
+                ],
+                "shipping_first_name_label": "",
+                "shipping_first_name_placeholder": "",
+                "shipping_first_last_heading": "",
+                "shipping_last_name": [
+                    "show",
+                    "required"
+                ],
+                "shipping_last_name_label": "",
+                "shipping_last_name_placeholder": "",
+                "shipping_company_heading": "",
+                "shipping_company": [
+                    "show",
+                    "required"
+                ],
+                "shipping_company_label": "",
+                "shipping_company_placeholder": "",
+                "shipping_country_heading": "",
+                "shipping_country": [
+                    "show",
+                    "required"
+                ],
+                "shipping_country_label": "",
+                "shipping_address_1_heading": "",
+                "shipping_address_1": [
+                    "show",
+                    "required"
+                ],
+                "shipping_address_1_label": "",
+                "shipping_address_1_placeholder": "",
+                "shipping_address_2_heading": "",
+                "shipping_address_2": [
+                    "show"
+                ],
+                "shipping_address_2_label": "",
+                "shipping_address_2_placeholder": "",
+                "shipping_city_heading": "",
+                "shipping_city": [
+                    "show",
+                    "required"
+                ],
+                "shipping_city_label": "",
+                "shipping_city_placeholder": "",
+                "shipping_state_heading": "",
+                "shipping_state": [
+                    "show",
+                    "required"
+                ],
+                "shipping_postcode": [
+                    "show",
+                    "required"
+                ]
+            }
+        },
+        "elements": {
+            "product_title": {
+                "active": "on"
+            },
+            "product_description": {
+                "active": "on"
+            },
+            "product_short_description": {
+                "active": "on"
+            },
+            "product_images": {
+                "active": "on"
+            },
+            "product_onsale": {
+                "active": "on"
+            },
+            "product_additional_info": {
+                "active": "on"
+            },
+            "product_price": {
+                "active": "on"
+            },
+            "product_meta": {
+                "active": "on"
+            },
+            "product_categories": {
+                "active": "on"
+            },
+            "product_rating": {
+                "active": "on"
+            },
+            "product_tags": {
+                "active": "on"
+            },
+            "product_sku": {
+                "active": "on"
+            },
+            "product_stock": {
+                "active": "on"
+            },
+            "actions_button": {
+                "active": "on"
+            },
+            "product_add_to_cart": {
+                "active": "on"
+            },
+            "product_share": {
+                "active": "on"
+            },
+            "product_sales_count": {
+                "active": "on"
+            },
+            "product_stock_counter": {
+                "active": "on"
+            },
+            "flash_sale_countdown": {
+                "active": "on"
+            },
+            "product_size_chart": {
+                "active": "on"
+            },
+            "product_quick_checkout": {
+                "active": "on"
+            },
+            "product_tabs": {
+                "active": "on"
+            },
+            "advance_product_tabs": {
+                "active": "on"
+            },
+            "product_reviews": {
+                "active": "on"
+            },
+            "upsells_product": {
+                "active": "on"
+            },
+            "upsells_product_custom": {
+                "active": "on"
+            },
+            "upsells_products_slider_custom": {
+                "active": "on"
+            },
+            "related_product": {
+                "active": "on"
+            },
+            "related_product_custom": {
+                "active": "on"
+            },
+            "related_products_slider_custom": {
+                "active": "on"
+            },
+            "products_grid": {
+                "active": "on"
+            },
+            "products_list": {
+                "active": "on"
+            },
+            "products_slider": {
+                "active": "on"
+            },
+            "products_single_cateogory": {
+                "active": "on"
+            },
+            "product_cateogories": {
+                "active": "on"
+            },
+            "social_share": {
+                "active": "on"
+            },
+            "wc_breadcrumbs": {
+                "active": "on"
+            },
+            "product_notice": {
+                "active": "on"
+            },
+            "rtsb_wishlist": {
+                "active": "on"
+            },
+            "highlighted_product": {
+                "active": "on"
+            },
+            "qv_product_title": {
+                "active": "on"
+            },
+            "qv_product_description": {
+                "active": "on"
+            },
+            "qv_product_short_description": {
+                "active": "on"
+            },
+            "qv_product_images": {
+                "active": "on"
+            },
+            "qv_product_badges": {
+                "active": "on"
+            },
+            "qv_product_additional_info": {
+                "active": "on"
+            },
+            "qv_product_price": {
+                "active": "on"
+            },
+            "qv_product_meta": {
+                "active": "on"
+            },
+            "qv_product_categories": {
+                "active": "on"
+            },
+            "qv_product_rating": {
+                "active": "on"
+            },
+            "qv_product_tags": {
+                "active": "on"
+            },
+            "qv_product_sku": {
+                "active": "on"
+            },
+            "qv_product_stock": {
+                "active": "on"
+            },
+            "qv_actions_button": {
+                "active": "on"
+            },
+            "qv_product_add_to_cart": {
+                "active": "on"
+            },
+            "qv_product_sales_count": {
+                "active": "on"
+            },
+            "qv_social_share": {
+                "active": "on"
+            },
+            "qv_product_quick_checkout": {
+                "active": "on"
+            },
+            "qv_product_size_chart": {
+                "active": "on"
+            },
+            "archive_title": {
+                "active": "on"
+            },
+            "archive_description": {
+                "active": "on"
+            },
+            "products_archive_catalog": {
+                "active": "on"
+            },
+            "products_archive_catalog_custom": {
+                "active": "on"
+            },
+            "ajax_product_filters": {
+                "active": "on"
+            },
+            "archive_result_count": {
+                "active": "on"
+            },
+            "archive_products_ordering": {
+                "active": "on"
+            },
+            "archive_product_mode": {
+                "active": "on"
+            },
+            "cart_table": {
+                "active": "on"
+            },
+            "cart_totals": {
+                "active": "on"
+            },
+            "cart_coupon_form": {
+                "active": "on"
+            },
+            "cross_sells": {
+                "active": "on"
+            },
+            "cross_sells_custom": {
+                "active": "on"
+            },
+            "cross_sells_custom_slider": {
+                "active": "on"
+            },
+            "billing_form": {
+                "active": "on"
+            },
+            "shipping_form": {
+                "active": "on"
+            },
+            "order_notes": {
+                "active": "on"
+            },
+            "order_review": {
+                "active": "on"
+            },
+            "checkout_payment": {
+                "active": "on"
+            },
+            "coupon_form": {
+                "active": "on"
+            },
+            "checkout_login_form": {
+                "active": "on"
+            },
+            "shipping_method": {
+                "active": "on"
+            },
+            "multi_step_checkout_widget": {
+                "active": "on"
+            },
+            "order_received_text": {
+                "active": "on"
+            },
+            "order_details_summary": {
+                "active": "on"
+            },
+            "order_details_table": {
+                "active": "on"
+            },
+            "downloadable_products": {
+                "active": "on"
+            },
+            "order_billing_address": {
+                "active": "on"
+            },
+            "order_shipping_address": {
+                "active": "on"
+            },
+            "account_navigation_edit_shipping": {
+                "active": "on"
+            },
+            "account_dashboard": {
+                "active": "on"
+            },
+            "account_orders": {
+                "active": "on"
+            },
+            "account_downloads": {
+                "active": "on"
+            },
+            "account_billing_address": {
+                "active": "on"
+            },
+            "account_shipping_address": {
+                "active": "on"
+            },
+            "account_address_description": {
+                "active": "on"
+            },
+            "account_details": {
+                "active": "on"
+            },
+            "account_order_status": {
+                "active": "on"
+            },
+            "account_order_details_download": {
+                "active": "on"
+            },
+            "account_order_details_note": {
+                "active": "on"
+            },
+            "account_order_details_table": {
+                "active": "on"
+            },
+            "account_order_details_order_again": {
+                "active": "on"
+            },
+            "account_order_details_order_shipping": {
+                "active": "on"
+            },
+            "account_order_details_order_billing": {
+                "active": "on"
+            },
+            "account_edit_billing_address": {
+                "active": "on"
+            },
+            "account_edit_shipping_address": {
+                "active": "on"
+            },
+            "account_login": {
+                "active": "on"
+            },
+            "account_login_form": {
+                "active": "on"
+            },
+            "account_registration_form": {
+                "active": "on"
+            },
+            "account_lost_password": {
+                "active": "on"
+            },
+            "product_lookbook": {
+                "active": "on"
+            },
+            "advanced_heading": {
+                "active": "on"
+            },
+            "dropcaps": {
+                "active": "on"
+            },
+            "shopbuilder_button": {
+                "active": "on"
+            },
+            "shopbuilder_cta": {
+                "active": "on"
+            },
+            "shopbuilder_info_box": {
+                "active": "on"
+            },
+            "shopbuilder_flip_box": {
+                "active": "on"
+            },
+            "shopbuilder_pricing_table": {
+                "active": "on"
+            },
+            "image_hotspots": {
+                "active": "on"
+            },
+            "shopbuilder_counter": {
+                "active": "on"
+            },
+            "shopbuilder_countdown": {
+                "active": "on"
+            },
+            "shopbuilder_progress_bar": {
+                "active": "on"
+            },
+            "image_accordion": {
+                "active": "on"
+            },
+            "shopbuilder_faq": {
+                "active": "on"
+            },
+            "logo_slider_and_grid": {
+                "active": "on"
+            },
+            "testimonial": {
+                "active": "on"
+            },
+            "team_member": {
+                "active": "on"
+            },
+            "post_grid": {
+                "active": "on"
+            },
+            "post_list": {
+                "active": "on"
+            },
+            "order_custom_fields_data": {
+                "active": "on"
+            }
+        },
+        "modules": {
+            "quick_view": {
+                "active": "on",
+                "loop_btn_position": "custom",
+                "loop_btn_position_shortcode": "",
+                "loop_custom_hook_name": "",
+                "loop_custom_hook_priority": "10",
+                "button_text": "Quick View",
+                "modal_width": "",
+                "modal_height": "",
+                "modal_wrapper_padding": "",
+                "modal_bg_color": "",
+                "modal_box_shadow_color": "",
+                "modal_overly_color": ""
+            },
+            "wishlist": {
+                "active": "on",
+                "enable_login_limit": "",
+                "hide_wishlist_non_logged_in": "",
+                "wishlist_shop_wrapper_heading": "",
+                "show_btn_on_loop": "on",
+                "loop_btn_position": "custom",
+                "loop_btn_position_shortcode": "",
+                "loop_custom_hook_name": "",
+                "loop_custom_hook_priority": "10",
+                "wishlist_single_wrapper_heading": "",
+                "show_btn_product_page": "on",
+                "product_btn_position": "custom",
+                "product_btn_position_shortcode": "",
+                "product_custom_hook_name": "",
+                "product_custom_hook_priority": "10",
+                "button_text": "Add to Wishlist",
+                "notice_added_text": "Product added!",
+                "notice_removed_text": "Product removed!",
+                "browse_list_text": "Browse Wishlist",
+                "page": "99",
+                "page_show_fields": [
+                    "info",
+                    "price",
+                    "availability",
+                    "add_to_cart",
+                    "remove"
+                ]
+            },
+            "compare": {
+                "active": "on",
+                "compare_shop_wrapper_heading": "",
+                "show_btn_on_loop": "on",
+                "loop_btn_position": "custom",
+                "loop_btn_position_shortcode": "",
+                "loop_custom_hook_name": "",
+                "loop_custom_hook_priority": "10",
+                "compare_single_wrapper_heading": "",
+                "show_btn_product_page": "on",
+                "product_btn_position": "custom",
+                "product_btn_position_shortcode": "",
+                "product_custom_hook_name": "",
+                "product_custom_hook_priority": "10",
+                "button_text": "Compare",
+                "notice_added_text": "Product added!",
+                "notice_removed_text": "Product removed!",
+                "browse_list_text": "Browse Compare",
+                "page": "100",
+                "max_limit": 10,
+                "page_show_fields": [
+                    "title",
+                    "rating",
+                    "price",
+                    "add_to_cart",
+                    "description",
+                    "availability",
+                    "sku",
+                    "weight",
+                    "dimensions"
+                ]
+            },
+            "variation_swatches": {
+                "active": ""
+            },
+            "variation_gallery": {
+                "active": ""
+            },
+            "mini_cart": {
+                "active": "on",
+                "mini_cart_wrapper_heading": "",
+                "mini_cart_drawer_style": "style3",
+                "mini_cart_open_style": "open-always",
+                "mini_cart_position": "left_center",
+                "mini_cart_extra_field_visibility": "on",
+                "mini_cart_coupon_visibility": "",
+                "mini_cart_empty_text": "No products in the cart.",
+                "mini_cart_go_shopping_btn_text": "Go Shopping",
+                "mini_cart_empty_image": "",
+                "mini_cart_loading_image": "",
+                "mini_cart_float_button_heading": "",
+                "hide_mini_cart": "on",
+                "mini_cart_float_btn_style": "style1",
+                "mini_cart_others_settings": "",
+                "mini_cart_flying_animation": "on",
+                "mini_cart_overlay_visibility": "on",
+                "mini_cart_show_on_mobile": "on",
+                "mini_cart_custom_selector": "",
+                "mini_cart_include_page": [],
+                "mini_cart_include_archive": [],
+                "mini_cart_include_details_page": [],
+                "mini_cart_exclude_page": [],
+                "mini_cart_float_bg": "",
+                "mini_cart_float_bg_hover": "",
+                "mini_cart_btn_width": 0,
+                "mini_cart_float_btn_radius": "",
+                "mini_cart_primary": "#ff6c23",
+                "mini_cart_secondary": "#010101"
+            },
+            "product_size_chart": {
+                "active": "on",
+                "product_size_chart_position": "custom",
+                "product_size_chart_shortcode": "",
+                "product_custom_hook_name": "",
+                "product_hook_priority": "",
+                "size_chart_button_action": "popups",
+                "chart_field_intro": "",
+                "chart_field": "[{\"title\":\"Size Guide\",\"apply_for\":\"product\",\"applicable_products\":[{\"value\":3992,\"label\":\"CAU Athleta Westlake Cardigan Sweater, Dragonfruit Pink ( ID 3992)\"},{\"value\":5980,\"label\":\"Full Wide-striped Sweater ( ID 5980)\"},{\"value\":5997,\"label\":\"Casual Laptop Backpack ( ID 5997)\"},{\"value\":6039,\"label\":\"EUC Athleta Westlake Cardigan Sweater, Dragonfruit Pink ( ID 6039)\"},{\"value\":3116,\"label\":\"Cream Leather Sneakers ( ID 3116)\"},{\"value\":6187,\"label\":\"Leather Women's Tote Bag ( ID 6187)\"}],\"size_chart_image\":{\"id\":7292,\"source\":\"https:\\\/\\\/www.radiustheme.com\\\/demo\\\/wordpress\\\/themes\\\/fasheno\\\/wp-content\\\/uploads\\\/2025\\\/01\\\/sb-product-size-chart.webp\"},\"uniqueid\":\"rtsb_repeater_item_0\"}]",
+                "size_chart_button_height": "",
+                "size_chart_wrapper_padding": "",
+                "size_chart_wrapper_margin": "",
+                "size_chart_button_background_color": "",
+                "size_chart_button_text_color": "",
+                "size_chart_button_background_hover_color": "",
+                "size_chart_button_text_hover_color": ""
+            },
+            "product_badges": {
+                "active": "on",
+                "hide_woocommerce_badge": "on",
+                "hide_on_sale": "all_products",
+                "group_badge_display_as": "horizontal",
+                "group_badge_gap": "10px",
+                "general_options": "",
+                "loop_group_position": "above_image",
+                "loop_custom_hook_name": "",
+                "loop_priority_note": "",
+                "group_position_hook_priority": "",
+                "group_badge_position": "top-left",
+                "product_options": "",
+                "product_page_group_position": "custom",
+                "product_page_badges_shortcode": "",
+                "product_page_custom_hook_name": "",
+                "product_page_priority_note": "",
+                "product_page_group_hook_priority": "",
+                "product_page_group_badge_position": "top-left",
+                "badges_field_intro": "",
+                "badges_field": "[{\"title\":\"Hot\",\"badge_condition\":\"custom\",\"badge_for\":\"on_sale\",\"badges_type\":\"text\",\"badge_preset\":\"preset2\",\"badges_text\":\"Hot\",\"apply_for\":\"product\",\"applicable_products\":[{\"value\":3108,\"label\":\"Striped cotton linen shirt ( ID 3108)\"},{\"value\":3111,\"label\":\"Medium-comfort jeans ( ID 3111)\"},{\"value\":3118,\"label\":\"Wool slim houndstooth jacket ( ID 3118)\"},{\"value\":3101,\"label\":\"Buttoned texture T-shirt ( ID 3101)\"},{\"value\":3097,\"label\":\"Quilted fur-effect bag ( ID 3097)\"}],\"badge_text_color\":\"#ffffff\",\"badge_bg_color\":\"#ffab02\",\"badge_font_width\":\"400\",\"uniqueid\":\"rtsb_repeater_item_0\"},{\"title\":\"Sale\",\"badge_condition\":\"custom\",\"badge_for\":\"on_sale\",\"badges_type\":\"text\",\"badge_preset\":\"preset2\",\"badges_text\":\"Sale\",\"apply_for\":\"product\",\"applicable_products\":[{\"value\":3109,\"label\":\"Slim fit structured suit shirt ( ID 3109)\"},{\"value\":3117,\"label\":\"Ninexis Full Size V-Neck ( ID 3117)\"},{\"value\":3101,\"label\":\"Buttoned texture T-shirt ( ID 3101)\"}],\"badge_text_color\":\"#ffffff\",\"badge_bg_color\":\"#54a652\",\"badge_font_width\":\"400\",\"uniqueid\":\"rtsb_repeater_item_1\"},{\"title\":\"Discount\",\"badge_condition\":\"dynamic\",\"badge_for\":\"on_sale\",\"badges_type\":\"text\",\"badge_preset\":\"preset2\",\"badges_text\":\"New\",\"show_badges_percent_text\":\"on\",\"apply_for\":\"product\",\"applicable_products\":[{\"value\":658,\"label\":\"Textured cotton T-shirt ( ID 658)\"},{\"value\":3097,\"label\":\"Quilted fur-effect bag ( ID 3097)\"},{\"value\":3108,\"label\":\"Striped cotton linen shirt ( ID 3108)\"},{\"value\":3116,\"label\":\"Cream Leather Sneakers ( ID 3116)\"},{\"value\":3119,\"label\":\"Recycled Double Strap Cami ( ID 3119)\"},{\"value\":98,\"label\":\"Gathered knitted t-shirt ( ID 98)\"},{\"value\":3099,\"label\":\"Pom pom cable-knit beanie ( ID 3099)\"}],\"badge_text_color\":\"#ffffff\",\"badge_bg_color\":\"#ff0004\",\"badge_font_width\":\"400\",\"uniqueid\":\"rtsb_repeater_item_2\",\"badge_font_size\":\"\",\"border_radius\":\"\",\"badge_padding\":\"\"}]"
+            },
+            "customize_my_account": {
+                "active": "on",
+                "endpoint_field_intro": "",
+                "endpoint_field": "[{\"uniqueid\":\"dashboard\",\"title\":\"Dashboard\",\"menu_visibility\":\"on\",\"deletable\":\"no\",\"icon\":\"none\",\"visibility\":\"all\",\"roles\":[],\"content_position\":\"replace\"},{\"uniqueid\":\"orders\",\"title\":\"Orders\",\"slug\":\"orders\",\"menu_visibility\":\"on\",\"deletable\":\"no\",\"icon\":\"none\",\"visibility\":\"all\",\"roles\":[],\"content_position\":\"replace\"},{\"uniqueid\":\"downloads\",\"title\":\"Downloads\",\"slug\":\"downloads\",\"menu_visibility\":\"on\",\"deletable\":\"no\",\"icon\":\"none\",\"visibility\":\"all\",\"roles\":[],\"content_position\":\"replace\"},{\"uniqueid\":\"edit-address\",\"title\":\"Addresses\",\"slug\":\"edit-address\",\"menu_visibility\":\"on\",\"deletable\":\"no\",\"icon\":\"none\",\"visibility\":\"all\",\"roles\":[],\"content_position\":\"replace\"},{\"uniqueid\":\"payment-methods\",\"title\":\"Payment methods\",\"slug\":\"payment-methods\",\"menu_visibility\":\"on\",\"deletable\":\"no\",\"icon\":\"none\",\"visibility\":\"all\",\"roles\":[],\"content_position\":\"replace\"},{\"uniqueid\":\"edit-account\",\"title\":\"Account details\",\"slug\":\"edit-account\",\"menu_visibility\":\"on\",\"deletable\":\"no\",\"icon\":\"none\",\"visibility\":\"all\",\"roles\":[],\"content_position\":\"replace\"},{\"uniqueid\":\"customer-logout\",\"title\":\"Log out\",\"slug\":\"customer-logout\",\"menu_visibility\":\"on\",\"deletable\":\"no\",\"icon\":\"none\",\"visibility\":\"all\",\"roles\":[]}]",
+                "endpoint_font_intro": "",
+                "my_acc_nav_font_size": "",
+                "my_acc_nav_font_weight": "400",
+                "my_acc_nav_icon_size": "",
+                "endpoint_color_intro": "",
+                "my_acc_nav_text_color": "",
+                "my_acc_nav_bg_color": "",
+                "my_acc_nav_icon_color": "",
+                "my_acc_nav_hover_color": "",
+                "my_acc_nav_hover_bg_color": "",
+                "my_acc_nav_hover_icon_color": "",
+                "my_acc_nav_active_color": "",
+                "my_acc_nav_active_bg_color": "",
+                "my_acc_nav_active_icon_color": "",
+                "endpoint_spacing_intro": "",
+                "my_acc_nav_border": "",
+                "my_acc_nav_border_color": "",
+                "my_acc_nav_padding": "",
+                "my_acc_nav_icon_spacing": "",
+                "my_acc_nav_icon_padding": "",
+                "my_acc_nav_margin": ""
+            },
+            "pre_order": {
+                "active": "on",
+                "pre_order_label_intro": "",
+                "pre_order_button_label": "Pre-Order",
+                "pre_order_closed_text": "Pre-Order Closed",
+                "pre_order_checkout_button_label": "",
+                "pre_order_avail_msg": "On Pre-Order: Expected availability by {availability_date}.",
+                "pre_order_avail_msg_no_date": "On Pre-Order: This product will be available soon.",
+                "pre_order_settings_intro": "",
+                "pre_order_max_allowed_order": "3",
+                "pre_order_status": "custom",
+                "pre_order_price": "hide",
+                "pre_order_auto_convert": "on",
+                "pre_order_user_access": "",
+                "user_role_management": "all",
+                "pre_order_roles": [
+                    "administrator",
+                    "customer"
+                ],
+                "hide_for_guest_users": "",
+                "guest_user_price_text": "Login to see prices",
+                "pre_order_cart_settings": "",
+                "prevent_mixing": "on",
+                "prevent_add_multiple": "",
+                "pre_order_countdown_settings": "",
+                "pre_order_show_countdown": "on",
+                "pre_order_notification_intro": "",
+                "pre_order_received_email": "on",
+                "pre_order_confirmation_email": "on",
+                "pre_order_release_email": "on",
+                "pre_order_cancellation_email": "on",
+                "pre_order_text_style_intro": "",
+                "pre_order_text_color": "",
+                "pre_order_bg_color": "",
+                "pre_order_font_size": "",
+                "pre_order_font_weight": "400",
+                "pre_order_radius": "",
+                "pre_order_padding": "",
+                "pre_order_margin": "",
+                "pre_order_badge_style_intro": "",
+                "pre_order_badge_text_color": "",
+                "pre_order_badge_bg_color": "",
+                "pre_order_counter_style_intro": "",
+                "pre_order_counter_background_color": "#ffffff",
+                "pre_order_counter_text_color": "#000000",
+                "pre_order_counter_button_margin": ""
+            },
+            "currency_switcher": {
+                "active": "on",
+                "show_sticky_currency_widget": "",
+                "show_currency_shortcode": "",
+                "currency_switcher_position": "left-middle",
+                "enable_currency_flag": "",
+                "enable_currency_text": "on",
+                "exchange_rates": "automatically",
+                "exchange_rate_resources": "cuex",
+                "cuex_api_key": "",
+                "update_exchange_rates": "24",
+                "location_settings": "",
+                "enable_geolocation": "",
+                "checkout_settings": "",
+                "checkout_currency": "customer-selected",
+                "update_currency_on_cart_page": "on",
+                "currency_field_intro": "",
+                "currency_options": "[{\"activate_currency\":\"on\",\"title\":\"CAD\",\"currency_rate\":\"1.44205\",\"currency_position\":\"left\",\"thousand_separator\":\",\",\"decimal_separator\":\".\",\"number_of_decimals\":2,\"uniqueid\":\"rtsb_repeater_item_1\",\"custom_symbol\":\"\"},{\"activate_currency\":\"on\",\"title\":\"AED\",\"currency_rate\":\"3.67300\",\"currency_position\":\"left\",\"thousand_separator\":\",\",\"decimal_separator\":\".\",\"number_of_decimals\":2,\"uniqueid\":\"rtsb_repeater_item_1\",\"custom_symbol\":\"\"},{\"activate_currency\":\"on\",\"title\":\"AUD\",\"currency_rate\":\"1.60077\",\"currency_position\":\"left\",\"thousand_separator\":\",\",\"decimal_separator\":\".\",\"number_of_decimals\":2,\"uniqueid\":\"rtsb_repeater_item_2\",\"custom_symbol\":\"\"}]",
+                "switcher_preset": "preset1",
+                "currency_text_color": "",
+                "currency_active_text_color": "#ff6c23",
+                "currency_text_font_size": "",
+                "switcher_bg_color": "",
+                "placeholder_section": "",
+                "currency_label_bg_color": "",
+                "currency_label_text_color": "",
+                "currency_icon_bg_color": "#ff6c23",
+                "currency_icon_color": "",
+                "currency_label_font_size": "",
+                "currency_icon_font_size": ""
+            },
+            "product_add_ons": {
+                "active": "on",
+                "add_ons_settings_intro": "",
+                "add_ons_position": "before",
+                "add_ons_cart_button_label": "Select Options",
+                "add_ons_update_base_price": "on",
+                "add_ons_hook_priority": "",
+                "price_box_settings_intro": "",
+                "add_ons_price_total_box": "all",
+                "add_ons_price_box_text": "Grand Total",
+                "add_ons_visibility_settings_intro": "",
+                "add_ons_show_add_to_cart": "",
+                "add_ons_show_in_cart": "on",
+                "add_ons_show_in_order_email": "on",
+                "add_ons_user_settings_intro": "",
+                "add_ons_user_role_management": "all",
+                "add_ons_roles": [
+                    "administrator",
+                    "customer"
+                ],
+                "add_on_groups_intro": "",
+                "add_on_groups": "",
+                "addons_style_intro": "",
+                "group_header_tag": "h2",
+                "group_header_font_size": "",
+                "group_desc_font_size": "",
+                "group_header_background_color": "",
+                "group_header_text_color": "",
+                "group_header_padding": "",
+                "group_header_margin": "",
+                "groups_style_intro": "",
+                "field_label_tag": "h3",
+                "field_label_font_size": "",
+                "field_desc_font_size": "",
+                "field_label_color": "",
+                "group_background_color": "",
+                "group_border_color": "",
+                "group_radius": "",
+                "group_tooltip_position": "right",
+                "group_padding": "",
+                "group_margin": "",
+                "form_style_intro": "",
+                "form_primary_color": "#ff6c23",
+                "form_background_color": "",
+                "field_text_color": "",
+                "form_border_color": "#ff6c23",
+                "checkbox_background_color": "#ff6c23",
+                "checkbox_label_color": "",
+                "checkbox_border_color": "#ff6c23",
+                "radio_background_color": "",
+                "radio_label_color": "",
+                "radio_border_color": "",
+                "text_select_background_color": "",
+                "text_select_label_color": "",
+                "switch_background_color": "#ff6c23",
+                "switch_label_color": "",
+                "price_box_style_intro": "",
+                "price_box_text_color": "",
+                "price_box_background_color": "#ffffff00",
+                "price_box_border_color": "",
+                "price_box_radius": "",
+                "price_box_padding": "",
+                "price_box_margin": ""
+            },
+            "checkout_fields_editor": {
+                "active": "",
+                "checkout_billing_intro": "",
+                "modify_billing_form": "",
+                "checkout_billing_title": "",
+                "checkout_billing_fields_info": "",
+                "checkout_billing_fields": "[{\"id\":1,\"deletable\":\"no\",\"isEnable\":\"on\",\"label\":\"First Name\",\"type\":\"text\",\"options\":[],\"name\":\"first_name\",\"validation\":\"default\",\"placeholder\":\"Enter your first name.\",\"isRequired\":\"on\",\"default\":\"\",\"custom_class\":\"form-row-first\"},{\"id\":2,\"deletable\":\"no\",\"isEnable\":\"on\",\"label\":\"Last Name\",\"type\":\"text\",\"options\":[],\"name\":\"last_name\",\"isRequired\":\"on\",\"placeholder\":\"Last Name\",\"default\":\"\",\"validation\":\"default\",\"custom_class\":\"form-row-last\"},{\"id\":3,\"deletable\":\"no\",\"label\":\"Company Name\",\"placeholder\":\"\",\"type\":\"text\",\"options\":[],\"isEnable\":\"on\",\"name\":\"company\",\"custom_class\":\"form-row-wide\"},{\"id\":4,\"deletable\":\"no\",\"label\":\"Country\",\"name\":\"country\",\"placeholder\":\"\",\"type\":\"text\",\"options\":[],\"isEnable\":\"on\",\"custom_class\":\"form-row-wide,address-field,update_totals_on_change\"},{\"id\":5,\"deletable\":\"no\",\"label\":\"Street address\",\"type\":\"text\",\"placeholder\":\"House number and street name\",\"options\":[],\"name\":\"address_1\",\"custom_class\":\"form-row-wide,address-field\",\"validation\":\"state\",\"isEnable\":\"on\"},{\"id\":6,\"deletable\":\"no\",\"label\":\"Apartment Address\",\"placeholder\":\"Apartment, suite, unit, etc. (optional)\",\"custom_class\":\"form-row-wide,address-field\",\"type\":\"text\",\"options\":[],\"isEnable\":\"on\",\"name\":\"address_2\"},{\"id\":7,\"deletable\":\"no\",\"label\":\"City \/ Town\",\"type\":\"text\",\"placeholder\":\"\",\"options\":[],\"isEnable\":\"on\",\"name\":\"city\",\"validation\":\"default\",\"isRequired\":\"on\",\"custom_class\":\"form-row-wide,address-field\"},{\"id\":8,\"isEnable\":\"on\",\"deletable\":\"no\",\"label\":\"State\/Country\",\"type\":\"text\",\"placeholder\":\"\",\"options\":[],\"name\":\"state\",\"validation\":\"state\",\"custom_class\":\"form-row-wide,address-field\"},{\"id\":9,\"deletable\":\"no\",\"label\":\"Postcode \/ ZIP\",\"type\":\"text\",\"placeholder\":\"\",\"options\":[],\"isEnable\":\"on\",\"name\":\"postcode\",\"validation\":\"postcode\",\"isRequired\":\"on\",\"custom_class\":\"form-row-wide,address-field\"},{\"id\":10,\"deletable\":\"no\",\"label\":\"Phone\",\"placeholder\":\"\",\"type\":\"text\",\"options\":[],\"isEnable\":\"on\",\"name\":\"phone\",\"validation\":\"phone\",\"isRequired\":\"on\",\"custom_class\":\"form-row-wide\"},{\"id\":11,\"deletable\":\"no\",\"label\":\"Email Address\",\"placeholder\":\"\",\"type\":\"text\",\"options\":[],\"isEnable\":\"on\",\"name\":\"email\",\"validation\":\"email\",\"isRequired\":\"on\",\"custom_class\":\"form-row-wide\"}]",
+                "checkout_shipping_intro": "",
+                "modify_shipping_form": "",
+                "checkout_shipping_title": "",
+                "checkout_shipping_fields_info": "",
+                "checkout_shipping_fields": "[{\"id\":1,\"deletable\":\"no\",\"isEnable\":\"on\",\"label\":\"First Name\",\"type\":\"text\",\"options\":[],\"name\":\"first_name\",\"validation\":\"default\",\"placeholder\":\"Enter your first name.\",\"isRequired\":\"on\",\"default\":\"\",\"custom_class\":\"form-row-first\"},{\"id\":2,\"deletable\":\"no\",\"isEnable\":\"on\",\"label\":\"Last Name\",\"type\":\"text\",\"options\":[],\"name\":\"last_name\",\"isRequired\":\"on\",\"placeholder\":\"Last Name\",\"default\":\"\",\"validation\":\"default\",\"custom_class\":\"form-row-last\"},{\"id\":3,\"deletable\":\"no\",\"label\":\"Company Name\",\"placeholder\":\"\",\"type\":\"text\",\"options\":[],\"isEnable\":\"on\",\"name\":\"company\",\"custom_class\":\"form-row-wide\"},{\"id\":4,\"deletable\":\"no\",\"label\":\"Country\",\"name\":\"country\",\"placeholder\":\"\",\"type\":\"text\",\"options\":[],\"isEnable\":\"on\",\"custom_class\":\"form-row-wide,address-field,update_totals_on_change\"},{\"id\":5,\"deletable\":\"no\",\"label\":\"Street address\",\"type\":\"text\",\"placeholder\":\"House number and street name\",\"options\":[],\"name\":\"address_1\",\"custom_class\":\"form-row-wide,address-field\",\"validation\":\"state\",\"isEnable\":\"on\"},{\"id\":6,\"deletable\":\"no\",\"label\":\"Apartment Address\",\"placeholder\":\"Apartment, suite, unit, etc. (optional)\",\"custom_class\":\"form-row-wide,address-field\",\"type\":\"text\",\"options\":[],\"isEnable\":\"on\",\"name\":\"address_2\"},{\"id\":7,\"deletable\":\"no\",\"label\":\"City \/ Town\",\"type\":\"text\",\"placeholder\":\"\",\"options\":[],\"isEnable\":\"on\",\"name\":\"city\",\"validation\":\"default\",\"isRequired\":\"on\",\"custom_class\":\"form-row-wide,address-field\"},{\"id\":8,\"isEnable\":\"on\",\"deletable\":\"no\",\"label\":\"State\/Country\",\"type\":\"text\",\"placeholder\":\"\",\"options\":[],\"name\":\"state\",\"validation\":\"state\",\"custom_class\":\"form-row-wide,address-field\"},{\"id\":9,\"deletable\":\"no\",\"label\":\"Postcode \/ ZIP\",\"type\":\"text\",\"placeholder\":\"\",\"options\":[],\"isEnable\":\"on\",\"name\":\"postcode\",\"validation\":\"postcode\",\"isRequired\":\"on\",\"custom_class\":\"form-row-wide,address-field\"}]",
+                "checkout_additional_intro": "",
+                "modify_additional_form": "",
+                "checkout_additional_title": "",
+                "checkout_additional_fields_info": "",
+                "checkout_additional_fields": "[{\"id\":1,\"deletable\":\"no\",\"isEnable\":\"on\",\"label\":\"Order Note\",\"type\":\"textarea\",\"options\":[],\"name\":\"comments\",\"validation\":\"default\",\"placeholder\":\"\",\"isRequired\":\"\",\"default\":\"\",\"custom_class\":\"\"}]"
+            },
+            "sales_notification": {
+                "active": "",
+                "notification_layout": "style-2",
+                "notification_image": "products-image",
+                "notification_number_of_popups": "100",
+                "notification_cache": "3600",
+                "notification_position": "bottom_left",
+                "notification_animate_for_top_left": "fadein",
+                "notification_animate_for_top_right": "fadein",
+                "notification_animate_for_bottom_left": "fadein",
+                "notification_animate_for_bottom_right": "fadein",
+                "notification_delay": "5000",
+                "notification_keep_onscreen": "7000",
+                "notification_show_close_button": "",
+                "notification_display_user_name": "",
+                "notification_show_on_mobile": "on",
+                "notification_show_processing_order": "on",
+                "notification_enable_product_link": "on",
+                "notification_product_title_max_words": "10",
+                "notification_include_archive": [],
+                "notification_exclude_archive": [],
+                "notification_include_pages": [],
+                "notification_exclude_pages": [],
+                "notification_background_color": "",
+                "notification_link_color": "#ff6c23",
+                "notification_link_hover_color": "",
+                "notification_text_color": "",
+                "notification_name_address_color": "",
+                "notification_purchased_time_color": "",
+                "notification_cross_button_color": ""
+            },
+            "flash_sale_countdown": {
+                "active": "on",
+                "counter_shop_wrapper_heading": "",
+                "show_counter_on_loop": "on",
+                "loop_counter_position": "custom",
+                "loop_counter_position_shortcode": "",
+                "loop_custom_hook_name": "",
+                "loop_hook_priority": "",
+                "loop_counter_layout": "horizontal",
+                "loop_counter_vertical_position": "top-left",
+                "counter_single_wrapper_heading": "",
+                "show_counter_product_page": "on",
+                "product_counter_position": "custom",
+                "product_counter_position_shortcode": "",
+                "product_custom_hook_name": "",
+                "product_hook_priority": "",
+                "loop_counter_vertical_top_distance": "20px",
+                "loop_counter_vertical_vertical_distance": "20px",
+                "counter_background_color": "",
+                "counter_text_color": "",
+                "counter_button_margin": "",
+                "campaign_field_intro": "",
+                "campaign_field": "[{\"enable_campaign\":\"on\",\"title\":\"Black Friday \",\"custom_date\":\"on\",\"end_date\":\"2025-03-29 14:24\",\"apply_for\":\"product\",\"applicable_products\":[{\"value\":3101,\"label\":\"Buttoned texture T-shirt ( ID 3101)\"},{\"value\":3992,\"label\":\"CAU Athleta Westlake Cardigan Sweater, Dragonfruit Pink ( ID 3992)\"},{\"value\":3119,\"label\":\"Recycled Double Strap Cami ( ID 3119)\"},{\"value\":3118,\"label\":\"Wool slim houndstooth jacket ( ID 3118)\"}],\"discount_type\":\"percent\",\"discount_amount\":10,\"uniqueid\":\"rtsb_repeater_item_0\"}]"
+            },
+            "quick_checkout": {
+                "active": "on",
+                "quick_checkout_clear_cart": "on",
+                "quick_checkout_button_action": "redirect",
+                "quick_checkout_button_text": "Quick Shop",
+                "quick_checkout_shop_wrapper_heading": "",
+                "show_quick_checkout_on_loop": "on",
+                "loop_quick_checkout_position": "custom",
+                "loop_quick_checkout_shortcode": "",
+                "loop_custom_hook_name": "",
+                "loop_hook_priority": "",
+                "quick_checkout_single_wrapper_heading": "",
+                "show_quick_checkout_product_page": "on",
+                "product_quick_checkout_position": "custom",
+                "product_quick_checkout_shortcode": "",
+                "product_custom_hook_name": "",
+                "product_hook_priority": "",
+                "loop_quick_checkout_button_height": "",
+                "loop_quick_checkout_button_padding": "",
+                "product_quick_checkout_button_height": "",
+                "product_quick_checkout_button_padding": "",
+                "quick_checkout_background_color": "",
+                "quick_checkout_text_color": "",
+                "quick_checkout_background_hover_color": "",
+                "quick_checkout_text_hover_color": ""
+            },
+            "multi_step_checkout": {
+                "active": "",
+                "checkout_step_settings": "",
+                "login_step_visibility": "on",
+                "show_back_to_cart_button": "on",
+                "checkout_text_change": "",
+                "back_to_top_btn_text": "",
+                "previous_btn_text": "",
+                "next_btn_text": "",
+                "skip_login_btn_text": "",
+                "place_order_btn_text": "",
+                "primary_color": ""
+            },
+            "back_order": {
+                "active": "on",
+                "back_order_max_allowed_order": "5",
+                "back_order_avail_date": "2025-04-30",
+                "back_order_avail_msg": "On Backorder: Expected availability by {availability_date}.",
+                "back_order_text_style_intro": "",
+                "back_order_text_color": "",
+                "back_order_bg_color": "",
+                "back_order_font_size": "",
+                "back_order_font_weight": "400",
+                "back_order_radius": "",
+                "back_order_padding": "",
+                "back_order_margin": "",
+                "back_order_badge_style_intro": "",
+                "back_order_badge_text_color": "",
+                "back_order_badge_bg_color": ""
+            },
+            "sticky_add_to_cart": {
+                "active": "on",
+                "sticky_settings": "",
+                "sticky_position": "bottom",
+                "visibility_triggers": "200",
+                "show_fullwidth": "",
+                "sticky_bar_width": "1320",
+                "sticky_bar_animation": "slide",
+                "button_label": "Add to Cart",
+                "visibility_settings": "",
+                "show_image": "on",
+                "show_product_title": "on",
+                "show_quantity_selector": "on",
+                "show_on_variation": "on",
+                "responsive_visibility": "default",
+                "bar_style_intro": "",
+                "sticky_color_scheme": "light",
+                "sticky_bar_primary_color": "#ff6c23",
+                "sticky_bar_bg_color": "",
+                "sticky_bar_title_tag": "h4",
+                "sticky_bar_title_font_size": "",
+                "sticky_bar_title_color": "",
+                "sticky_bar_content_font_size": "",
+                "sticky_bar_content_color": "",
+                "sticky_bar_border_color": "",
+                "sticky_bar_shadow": "",
+                "sticky_bar_radius": "",
+                "sticky_bar_padding": "",
+                "form_style_intro": "",
+                "input_text_color": "",
+                "input_bg_color": "",
+                "input_border_color": "",
+                "qty_color": "",
+                "sticky_bar_button": "",
+                "sticky_bar_button_text_color": "",
+                "sticky_bar_button_hover_text_color": "",
+                "sticky_bar_button_bg_color": "",
+                "sticky_bar_button_hover_bg_color": ""
+            }
+        }
+    },
+    "rtsb_extra_settings": {
+        "rtsb_plugin_activation_time": 1729764008,
+        "rtsbpro_version": "2.3.0",
+        "settings_migration_v_2_0_4": "2.3.0",
+        "rtsb_wishlist_db_version": "1.0.0",
+        "rtsb_compare_db_version": "1.0.0",
+        "rtsb_version": "2.5.3",
+        "template_settings_migration_v_2_1_16": "2.3.0"
+    },
+    "rtsb_template_settings": {
+        "rtsb_tb_template_default_shop": 3308,
+        "rtsb_tb_template_default_archive": "",
+        "rtsb_template_specific_category_set_default_3316": true,
+        "rtsb_template_for_selected_category_3316": [
+            "accessories"
+        ],
+        "rtsb_template_specific_category_set_default_3325": true,
+        "rtsb_template_for_selected_category_3325": [
+            "women-fashion"
+        ],
+        "rtsb_tb_template_default_product": 5940,
+        "rtsb_template_specific_product_set_default_5940": true,
+        "rtsb_template_for_selected_products_5940": [],
+        "rtsb_template_specific_product_set_default_5990": true,
+        "rtsb_template_for_selected_products_5990": [
+            5980
+        ],
+        "rtsb_template_specific_product_set_default_5999": true,
+        "rtsb_template_for_selected_products_5999": [
+            5997
+        ],
+        "rtsb_template_specific_product_set_default_6041": true,
+        "rtsb_template_for_selected_products_6041": [
+            6039
+        ],
+        "rtsb_tb_template_default_cart": 6105,
+        "rtsb_tb_template_default_checkout": 6108,
+        "rtsb_tb_template_default_myaccount_dashboard": 6111,
+        "rtsb_tb_template_default_myaccount_order": 6112,
+        "rtsb_tb_template_default_myaccount_downloads": 6114,
+        "rtsb_tb_template_default_myaccount_address": 6115,
+        "rtsb_tb_template_default_myaccount_edit_billing_address": 6118,
+        "rtsb_tb_template_default_myaccount_edit_shipping_address": 6119,
+        "rtsb_tb_template_default_myaccount_edit_details": 6120,
+        "rtsb_tb_template_default_myaccount_order_details": 6121,
+        "rtsb_tb_template_default_order_thank_you": 6123,
+        "rtsb_tb_template_default_myaccount_auth": 6124,
+        "rtsb_template_specific_category_set_default_6128": true,
+        "rtsb_template_for_selected_category_6128": [
+            "man-fashion"
+        ],
+        "rtsb_tb_template_default_quick_view": "",
+        "rtsb_template_specific_product_set_default_7293": true,
+        "rtsb_template_for_selected_products_7293": [
+            3116
+        ],
+        "rtsb_template_specific_product_set_default_7304": true,
+        "rtsb_template_for_selected_products_7304": [
+            6187
+        ]
+    }
+}

@@ -167,7 +167,7 @@ class ImageBox extends ElementorBase {
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'title_space',
 			[
 				'label'      => __( 'Title Space', 'fasheno-core' ),
@@ -206,7 +206,7 @@ class ImageBox extends ElementorBase {
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'sub_title_space',
 			[
 				'label'      => __( 'Sub Title Space', 'fasheno-core' ),
@@ -653,6 +653,32 @@ class ImageBox extends ElementorBase {
 			[
 				'label' => esc_html__( 'Box Style', 'fasheno-core' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_responsive_control(
+			'alignment',
+			[
+				'label'     => __( 'Alignment', 'fasheno-core' ),
+				'type'      => \Elementor\Controls_Manager::CHOOSE,
+				'options'   => [
+					'left'   => [
+						'title' => __( 'Left', 'fasheno-core' ),
+						'icon'  => 'eicon-text-align-left',
+					],
+					'center' => [
+						'title' => __( 'Center', 'fasheno-core' ),
+						'icon'  => 'eicon-text-align-center',
+					],
+					'right'  => [
+						'title' => __( 'Right', 'fasheno-core' ),
+						'icon'  => 'eicon-text-align-right',
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}}' => 'text-align: {{VALUE}} !important',
+				],
+				'toggle'    => true,
 			]
 		);
 

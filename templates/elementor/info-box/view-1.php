@@ -64,7 +64,9 @@ $range_two = ( $scroll_animation == 'yes' ) ? $range_two : '';
 
         <div class="info-content-holder">
 	        <?php if ( $title ) { ?>
-                <<?php echo esc_attr( $title_tag ); ?> class="info-title"><a <?php echo $attr; ?>><?php fasheno_html( $title, 'allow_title' );?></a></<?php echo esc_attr( $title_tag ); ?>>
+                <<?php echo esc_attr( $title_tag ); ?> class="info-title">
+                    <?php echo $link['url'] ? '<a ' . $attr . '>' : null; fasheno_html( $title, 'allow_title' ); echo $link['url'] ? '</a>' : null; ?>
+                </<?php echo esc_attr( $title_tag ); ?>>
             <?php } ?>
 
 			<?php if ( $sub_title ) : ?>

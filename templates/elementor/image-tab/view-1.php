@@ -27,10 +27,10 @@ if( $project_thumbnail_size ) {
             <?php foreach ( $list_items as $i => $item ) {
                 $active = $i == 0 ? 'is-active' : ''; ?>
                     <div class="content-wrap tab-block-tab <?php echo esc_attr( $active ) ?>">
-                        <?php if( ( $count_display == 'yes') && $item['count_title'] ) { ?><div class="rt-number"><?php echo fasheno_html( $item['count_title'], 'allow_title' );?></div><?php } ?>
+                        <?php if( ( $count_display == 'yes') && $item['count_title'] ) { ?><div class="rt-number"><?php fasheno_html( $item['count_title'], 'allow_title' );?></div><?php } ?>
                         <div class="content-info">
-                            <?php if( $item['title'] ) { ?><<?php echo esc_attr( $title_tag ); ?> class="rt-title"><span class="link" <?php //echo $attr; ?>><?php echo fasheno_html( $item['title'], 'allow_title' );?></span></<?php echo esc_attr( $title_tag ); ?>><?php } ?>
-                        <?php if( $item['content'] ) { ?><div class="rt-content"><?php echo fasheno_html( $item['content'], 'allow_title' );?></div><?php } ?>
+                            <?php if( $item['title'] ) { ?><<?php echo esc_attr( $title_tag ); ?> class="rt-title"><span class="link"><?php fasheno_html( $item['title'], 'allow_title' );?></span></<?php echo esc_attr( $title_tag ); ?>><?php } ?>
+                        <?php if( $item['content'] ) { ?><div class="rt-content"><?php fasheno_html( $item['content'], 'allow_title' );?></div><?php } ?>
                     </div>
                 </div>
             <?php } ?>
@@ -46,8 +46,9 @@ if( $project_thumbnail_size ) {
 				    $attr .= ' aria-label="info link"';
 			    }
                 ?>
-                <div class="service-img tab-block-pane">
-                    <a class="img-link" <?php echo $attr; ?>><?php echo wp_get_attachment_image( $item['image']['id'], $thumb_size ); ?></a>
+                <div class="service-img tab-block-pane rt-button">
+	                <?php echo wp_get_attachment_image( $item['image']['id'], $thumb_size ); ?>
+	                <a class="btn button-2" <?php echo $attr; ?>><span><i class="icon-rt-next"></i><?php fasheno_html( $item['title'], 'allow_title' );?></span></a>
                 </div>
 		    <?php } ?>
         </div>

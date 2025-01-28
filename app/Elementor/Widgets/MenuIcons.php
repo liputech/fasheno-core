@@ -689,7 +689,24 @@ class MenuIcons extends ElementorBase {
 				'selector' => '{{WRAPPER}} .rt-action-button .btn',
 			]
 		);
-
+		$this->add_responsive_control(
+			'button_width',
+			[
+				'type'    => Controls_Manager::SLIDER,
+				'mode'          => 'responsive',
+				'label'   => esc_html__( 'Width', 'fasheno-core' ),
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 300,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .rt-action-button .btn' => 'width: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
 		$this->add_responsive_control(
 			'button_padding',
 			[
@@ -749,7 +766,7 @@ class MenuIcons extends ElementorBase {
 						'label' => esc_html__( 'Background', 'fasheno-core' ),
 					],
 				],
-				'selector' => '{{WRAPPER}} .rt-action-button .btn:before',
+				'selector' => '{{WRAPPER}} .rt-action-button .btn',
 			]
 		);
 
@@ -801,7 +818,7 @@ class MenuIcons extends ElementorBase {
 						'label' => esc_html__( 'Background', 'fasheno-core' ),
 					],
 				],
-				'selector' => '{{WRAPPER}} .rt-action-button .btn:after',
+				'selector' => '{{WRAPPER}} .rt-action-button .btn:hover',
 			]
 		);
 

@@ -108,7 +108,7 @@ if ( $button ) {
 		<?php if ( $button == 'yes' ) { ?>
 			<li class="rt-action-button rt-button">
 				<a class="btn button-2" <?php echo $attr; ?> aria-label="button link">
-					<?php if( $button_icon ) { ?><span><?php \Elementor\Icons_Manager::render_icon( $button_icon ); ?></span><?php } ?><?php if ( $button_text ) { ?><?php echo esc_html( $button_text );?><?php } ?>
+                    <span><?php if( $button_icon ) { ?><?php \Elementor\Icons_Manager::render_icon( $button_icon ); ?><?php } ?><?php if ( $button_text ) { ?><?php echo esc_html( $button_text );?><?php } ?></span>
 				</a>
 			</li>
 		<?php } ?>

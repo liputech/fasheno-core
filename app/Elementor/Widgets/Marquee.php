@@ -235,6 +235,7 @@ class Marquee extends ElementorBase {
 				'type'      => Controls_Manager::COLOR,
 				'label'     => esc_html__( 'Title Hover Color', 'fasheno-core' ),
 				'selectors' => [
+					'{{WRAPPER}} .rt-marquee-slider .rt-marquee-item .entry-title:hover' => 'color: {{VALUE}}',
 					'{{WRAPPER}} .rt-marquee-slider .rt-marquee-item .entry-title a:hover' => 'color: {{VALUE}}',
 				],
 			]
